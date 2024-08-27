@@ -6,7 +6,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField, Tooltip("How farfg can the player move left and right")]
-    private float HopIncrement = 25f;
+    private float hopIncrement = 25f;
+
+    [SerializeField, Tooltip("How long the player takes to hop left or right")]
+    private float hopSpeed = 2f;
+
+    [SerializeField, Tooltip("The lane the player is currently in")]
+    private int lane = 0;
+    
+    [SerializeField, Tooltip("Whether or not the player is currently in the middle of an action")]
+    private bool pauseInput = false;
+    
+    [SerializeField, Tooltip("Whether or not the player is alive")]
+    bool isAlive = true;
 
     private Rigidbody rb;
 
@@ -28,9 +40,57 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (isAlive)
+        {
+            // don't accept input if the player is in the middle of an action
+            if (pauseInput)
+            {
+                return;
+            }
+
+            
+            // Player inputs
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                StartCoroutine(HopToSide(-1));
+            }
+            
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                StartCoroutine(HopToSide(1));
+            }
+        }
+    }
+    
+
+
+    // Causes the player to hop left or right
+    IEnumerator HopToSide(int direction)
+    {
+        // Don't allow the player to hop if they are at the edge of the screen
+        if ((lane == -1 && direction == -1) || (lane == 1 && direction == 1))
+            yield break;
         
+        lane += direction;
+        
+        // The target hop position
+        float targetX = transform.position.x + (hopIncrement * direction);
+        pauseInput = true;
+        
+        Vector3 dest = new Vector3(targetX, transform.position.y, transform.position.z);
+        
+        // Lerp the palyer to it's new position
+        while (Vector3.Distance(transform.position, dest) > 0.1f)
+        {
+
+            float newPosition = Mathf.Lerp(transform.position.x, targetX, hopSpeed);
+            rb.MovePosition(new Vector3(newPosition, transform.position.y, transform.position.z));
+
+            yield return new WaitForFixedUpdate();
+        }
+        
+        pauseInput = false;
     }
 }
