@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62abc43164167ce48a568e4afbbfb9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hopIncrement: 25
+  hopIncrement: 5
   hopSpeed: 2
   jumpHeight: 2
   jumpSpeed: 0.6
