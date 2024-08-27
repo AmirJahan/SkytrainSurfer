@@ -25,6 +25,12 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField, Tooltip("Whether or not the player has jumped")]
     bool hasJumped = false;
+
+
+    [Header("Slide settings")]
+    
+    [SerializeField, Tooltip("Slide duration")]
+    private float slideDuration = 0.5f;
     
     
     [Header("Controller Values")]
@@ -92,6 +98,11 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(Jump());
             }
             
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                StartCoroutine(Slide());
+            }
+            
             
         }
     }
@@ -155,7 +166,22 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(new Vector3(transform.position.x, newPosition, transform.position.z));
         }
 
+        // how long to hang in air
+        yield return new WaitForSeconds(jumpHangTime);
         rb.useGravity = true;
+    }
+    
+    
+    IEnumerator Slide()
+    {
+        pauseInput = true;
+
+        CapsuleCollider col = GetComponent<CapsuleCollider>();
+        col.height /= 4;
+        
+        yield return new WaitForSeconds(slideDuration);
+        col.height *= 4;
+        pauseInput = false;
     }
 
     private void OnCollisionEnter(Collision other)
