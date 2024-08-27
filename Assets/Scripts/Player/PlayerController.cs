@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("How long the player can stay in the air")]
     float jumpHangTime = 0.5f;
     
+    [SerializeField, Tooltip("Whether or not the player has jumped")]
+    bool hasJumped = false;
+    
     
     [Header("Controller Values")]
     [SerializeField, Tooltip("The lane the player is currently in")]
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
             {
                 rb = gameObject.AddComponent<Rigidbody>();
             }
+            
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 
@@ -126,7 +131,14 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator Jump()
     {
-        pauseInput = true;
+        if (hasJumped)
+        {
+            yield break;
+        }
+
+        hasJumped = true;
+        rb.useGravity = false;
+        
         
         MeshRenderer Mesh = GetComponent<MeshRenderer>();
         float targetJumpLocation = transform.position.y + (jumpHeight * Mesh.bounds.size.y);
@@ -143,6 +155,11 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(new Vector3(transform.position.x, newPosition, transform.position.z));
         }
 
-        pauseInput = false;
+        rb.useGravity = true;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        hasJumped = false;
     }
 }
