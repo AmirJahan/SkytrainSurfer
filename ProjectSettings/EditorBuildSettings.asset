@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/XavUI.unity
     guid: dee2750fcfe954d03901d5d5684a14f8
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

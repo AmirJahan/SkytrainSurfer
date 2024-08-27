@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Quit : MonoBehaviour
 {
     private void Update()
     {
+        //this is literally only for testing on the computers
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             QuitGame();
