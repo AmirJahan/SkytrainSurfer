@@ -124,12 +124,12 @@ public class PlayerController : MonoBehaviour
                     StartCoroutine(HopToSide(1));
                 }
 
-                else if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     StartCoroutine(Jump());
                 }
 
-                else if (Input.GetKeyDown(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     StartCoroutine(Slide());
                 }
