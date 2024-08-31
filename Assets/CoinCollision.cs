@@ -7,27 +7,14 @@ using UnityEngine.Events;
 
 public class CoinCollision : MonoBehaviour
 {
-    //[SerializeField] private UnityEvent OnCoinPicked;
-    [SerializeField] private TextMeshProUGUI coinText;
-    private int coinScore = 0;
+    [SerializeField] private UnityEvent OnCoinPicked;
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //OnCoinPicked?.Invoke();
-            coinScore++;
+            OnCoinPicked?.Invoke();
             Destroy(gameObject);
         }
-    }
-
-    private void CoinScoreUpdate()
-    {
-        coinText.text = coinScore.ToString();
-    }
-
-    private void Update()
-    {
-        CoinScoreUpdate();
     }
 }
