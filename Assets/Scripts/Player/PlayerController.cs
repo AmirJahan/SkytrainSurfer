@@ -25,6 +25,15 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField, Tooltip("Whether or not the player has jumped")]
     bool hasJumped = false;
+    
+    [SerializeField, Tooltip("The amount of health the currently player has")]
+    float currentHealth = 100f;
+    
+    [SerializeField, Tooltip("The amount of health the  player can have at most")]
+    float maxtHealth = 100f;
+    
+    [SerializeField, Tooltip("The amount of damage an obstacle does to the player")]
+    float obstacleDamage = 10f;
 
 
     [Header("Slide settings")]
@@ -66,7 +75,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // the player should have full health at the start
+        currentHealth = maxtHealth;
     }
 
     
@@ -187,5 +197,23 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         hasJumped = false;
+        
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            // reduce the player's health
+            currentHealth -= obstacleDamage;
+            
+            // check if the player is dead
+            if (currentHealth <= 0)
+            {
+                isAlive = false;
+            }
+        }
+    }
+
+
+    public bool GetAlive()
+    {
+        return isAlive;
     }
 }
