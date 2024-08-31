@@ -152,15 +152,16 @@ public class PlayerController : MonoBehaviour
         pauseInput = true;
 
         int startedLayer = lane;
-        bool nhasJumped = hasJumped;
+        float startedY = transform.position.y;
         // The destination of the player
         Vector3 dest = new Vector3(targetX, transform.position.y, transform.position.z);
 
         // Lerp the palyer to it's new position
         while (Vector3.Distance(transform.position, dest) > 0.1f)
         {
-            if (lane != startedLayer || nhasJumped != hasJumped)
+            if (lane != startedLayer || transform.position.y != startedLayer)
             {
+                startedY = transform.position.y;
                 dest = new Vector3(targetX, transform.position.y, transform.position.z);
             }
             
@@ -218,7 +219,6 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator Slide()
     {
-        pauseInput = true;
 
         Vector3 dest = new Vector3(transform.position.x, transform.position.y - (col.height / 4), transform.position.z);
         
@@ -229,7 +229,12 @@ public class PlayerController : MonoBehaviour
             {
                 dest = new Vector3(transform.position.x, transform.position.y - (col.height / 4), transform.position.z);
             }
-            
+
+            if (hasJumped)
+            {
+                break;
+            }
+
             transform.position = Vector3.Lerp(transform.position, dest, slideTransitionTime * Time.deltaTime);
         }
 
@@ -247,12 +252,16 @@ public class PlayerController : MonoBehaviour
             {
                 dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
             }
+            if (hasJumped)
+            {
+                break;
+            }
             
             transform.position = Vector3.Lerp(transform.position, dest, slideTransitionTime * Time.deltaTime);
         }
         
-        rb.AddForce(Vector3.up);
-        pauseInput = false;
+        if (!hasJumped)
+            rb.AddForce(Vector3.up);
     }
 
     private void OnCollisionEnter(Collision other)
