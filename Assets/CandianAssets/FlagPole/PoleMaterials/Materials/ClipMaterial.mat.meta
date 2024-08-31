@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8a9ff83b0c849c84eb156a5507f1f34d
+timeCreated: 1521804660
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 116392
+  packageName: Realistic Flag Pack
+  packageVersion: 1.0
+  assetPath: Assets/FlagPole/PoleMaterials/Materials/ClipMaterial.mat
+  uploadId: 243352
