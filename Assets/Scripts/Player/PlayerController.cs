@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField, Tooltip("Whether or not the player has jumped")]
     bool hasJumped = false;
+
+    private bool fastFall = false;
     
     [SerializeField, Tooltip("The amount of health the currently player has")]
     float currentHealth = 100f;
@@ -56,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField, Tooltip("Slide transition time")]
     private float slideTransitionTime = 0.25f;
+    
+    [SerializeField, Tooltip("How fast the character falls when sliding in air")]
+    float fastFallMultiplier = 150f;
     
     
     [Header("Controller Values")]
@@ -105,34 +110,32 @@ public class PlayerController : MonoBehaviour
         if (isAlive)
         {
             // don't accept input if the player is in the middle of an action
-            if (pauseInput)
+            if (!pauseInput)
             {
-                return;
+
+                // Player inputs
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    StartCoroutine(HopToSide(-1));
+                }
+
+                else if (Input.GetKeyDown(KeyCode.D))
+                {
+                    StartCoroutine(HopToSide(1));
+                }
+
+                else if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    StartCoroutine(Jump());
+                }
+
+                else if (Input.GetKeyDown(KeyCode.S))
+                {
+                    StartCoroutine(Slide());
+                }
             }
 
-            
-            // Player inputs
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                StartCoroutine(HopToSide(-1));
-            }
-            
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                StartCoroutine(HopToSide(1));
-            }
-            
-            else if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(Jump());
-            }
-            
-            else if (Input.GetKeyDown(KeyCode.S))
-            {
-                StartCoroutine(Slide());
-            }
-            
-            
+
         }
     }
     
@@ -142,14 +145,14 @@ public class PlayerController : MonoBehaviour
     IEnumerator HopToSide(int direction)
     {
         // Don't allow the player to hop if they are at the edge of the screen
-        if ((lane == -1 && direction == -1) || (lane == 1 && direction == 1))
+        if ((lane == -1 && direction == -1) || (lane == 1 && direction == 1) || pauseInput)
             yield break;
         
+        pauseInput = true;
         lane += direction;
         
         // The target hop position
         float targetX = transform.position.x + (hopIncrement * direction);
-        pauseInput = true;
 
         int startedLayer = lane;
         float startedY = transform.position.y;
@@ -186,6 +189,7 @@ public class PlayerController : MonoBehaviour
         }
 
         hasJumped = true;
+        fastFall = false;
         rb.useGravity = false;
         
         
@@ -199,6 +203,12 @@ public class PlayerController : MonoBehaviour
         
         while (Vector3.Distance(transform.position, dest) > 0.1f)
         {
+            if (fastFall)
+            {
+                rb.useGravity = true;
+                break;
+            }
+
             if (lane != startedLayer)
             {
                 dest = new Vector3(transform.position.x, targetJumpLocation, transform.position.z);
@@ -212,14 +222,18 @@ public class PlayerController : MonoBehaviour
         }
 
         // how long to hang in air
-        yield return new WaitForSeconds(jumpHangTime);
+        if (!fastFall)
+            yield return new WaitForSeconds(jumpHangTime);
+        
         rb.useGravity = true;
     }
     
     
     IEnumerator Slide()
     {
-
+        rb.AddForce(Vector3.down * fastFallMultiplier);
+        fastFall = true;
+        
         Vector3 dest = new Vector3(transform.position.x, transform.position.y - (col.height / 4), transform.position.z);
         
         int startedLayer = lane;
@@ -262,12 +276,15 @@ public class PlayerController : MonoBehaviour
         
         if (!hasJumped)
             rb.AddForce(Vector3.up);
+
+        fastFall = false;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         hasJumped = false;
         pauseInput = false;
+        fastFall = false;
         
         if (other.gameObject.CompareTag("Obstacle"))
         {
