@@ -5,6 +5,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    static PlayerController Instance;
+    
+    public static PlayerController GetInstance()
+    {
+        if (!Instance)
+        {
+            Instance = FindObjectOfType<PlayerController>();
+        }
+
+        return Instance;
+    }
+    
+    
     [Header("Hop Settings")]
     [SerializeField, Tooltip("How farfg can the player move left and right")]
     private float hopIncrement = 25f;
@@ -40,11 +53,15 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField, Tooltip("Slide duration")]
     private float slideDuration = 0.5f;
+
+    [SerializeField, Tooltip("Slide transition time")]
+    private float slideTransitionTime = 0.25f;
     
     
     [Header("Controller Values")]
     [SerializeField, Tooltip("The lane the player is currently in")]
     private int lane = 0;
+
     
     [SerializeField, Tooltip("Whether or not the player is currently in the middle of an action")]
     private bool pauseInput = false;
@@ -54,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
-    
+    private CapsuleCollider col;
     
     private void OnValidate()
     {
@@ -66,7 +83,8 @@ public class PlayerController : MonoBehaviour
                 rb = gameObject.AddComponent<Rigidbody>();
             }
             
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+            
         }
     }
 
@@ -75,6 +93,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        col = GetComponent<CapsuleCollider>();
         // the player should have full health at the start
         currentHealth = maxtHealth;
     }
@@ -131,18 +150,26 @@ public class PlayerController : MonoBehaviour
         // The target hop position
         float targetX = transform.position.x + (hopIncrement * direction);
         pauseInput = true;
-        
+
+        int startedLayer = lane;
+        bool nhasJumped = hasJumped;
         // The destination of the player
         Vector3 dest = new Vector3(targetX, transform.position.y, transform.position.z);
-        
+
         // Lerp the palyer to it's new position
         while (Vector3.Distance(transform.position, dest) > 0.1f)
         {
+            if (lane != startedLayer || nhasJumped != hasJumped)
+            {
+                dest = new Vector3(targetX, transform.position.y, transform.position.z);
+            }
+            
             // move the player the next step
             float newPosition = Mathf.Lerp(transform.position.x, targetX, hopSpeed);
             rb.MovePosition(new Vector3(newPosition, transform.position.y, transform.position.z));
 
             yield return new WaitForFixedUpdate();
+            Debug.Log("one");
         }
         
         pauseInput = false;
@@ -166,9 +193,16 @@ public class PlayerController : MonoBehaviour
 
         // the jump destination world point
         Vector3 dest = new Vector3(transform.position.x, targetJumpLocation, transform.position.z);
+
+        int startedLayer = lane;
         
         while (Vector3.Distance(transform.position, dest) > 0.1f)
         {
+            if (lane != startedLayer)
+            {
+                dest = new Vector3(transform.position.x, targetJumpLocation, transform.position.z);
+            }
+
             yield return new WaitForFixedUpdate();
             
             // Move the player over to the next step
@@ -186,20 +220,51 @@ public class PlayerController : MonoBehaviour
     {
         pauseInput = true;
 
-        CapsuleCollider col = GetComponent<CapsuleCollider>();
+        Vector3 dest = new Vector3(transform.position.x, transform.position.y - (col.height / 4), transform.position.z);
+        
+        int startedLayer = lane;
+        while ( Vector3.Distance( transform.position, dest) > 0.1f)
+        {
+            if (lane != startedLayer)
+            {
+                dest = new Vector3(transform.position.x, transform.position.y - (col.height / 4), transform.position.z);
+            }
+            
+            transform.position = Vector3.Lerp(transform.position, dest, slideTransitionTime * Time.deltaTime);
+        }
+
         col.height /= 4;
         
         yield return new WaitForSeconds(slideDuration);
+        
         col.height *= 4;
+        
+        dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
+        startedLayer = lane;
+        while ( Vector3.Distance( transform.position, dest) > 0.1f )
+        {
+            if (lane != startedLayer)
+            {
+                dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
+            }
+            
+            transform.position = Vector3.Lerp(transform.position, dest, slideTransitionTime * Time.deltaTime);
+        }
+        
+        rb.AddForce(Vector3.up);
         pauseInput = false;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         hasJumped = false;
+        pauseInput = false;
         
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            // destrpy tje obstacle
+            Destroy(other.gameObject);
+            
             // reduce the player's health
             currentHealth -= obstacleDamage;
             
@@ -209,6 +274,7 @@ public class PlayerController : MonoBehaviour
                 isAlive = false;
             }
         }
+        
     }
 
 
