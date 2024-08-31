@@ -1,30 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CoinCollision : MonoBehaviour
 {
-    [SerializeField]
-    UnityEvent OnCoinPicked;
-
+    //[SerializeField] private UnityEvent OnCoinPicked;
+    [SerializeField] private TextMeshProUGUI coinText;
+    private int coinScore = 0;
+    
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            OnCoinPicked?.Invoke();
+            //OnCoinPicked?.Invoke();
+            coinScore++;
             Destroy(gameObject);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private void CoinScoreUpdate()
     {
-        
+        coinText.text = coinScore.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        CoinScoreUpdate();
     }
 }
