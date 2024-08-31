@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Sector
+{
+    SideTrains,
+    LeftTrain,
+    RightTrain
+}
+
 public class LevelGenerator : MonoBehaviour
 {
 
@@ -16,10 +23,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField]
     GameObject PlayerObject;
 
-    GameObject[] CurrentChunks;
-
     [SerializeField]
-    float WorldSpeed = 10.0f;
+    public float WorldSpeed = 10.0f;
 
     private void Awake()
     {
@@ -29,49 +34,44 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentChunks = new GameObject[2];
-
-        CurrentChunks[0] = SpawnChunk(new Vector3(-45.0f, -1.0f, 0.5f));
-        CurrentChunks[1] = SpawnChunk(new Vector3(-145.0f, -1.0f, 0.5f));
+        SpawnChunk(new Vector3(-45.0f, -1.5f, 0.0f));
+        SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
     }
 
 
-    GameObject SpawnChunk(Vector3 RelativePosition)
+    public GameObject SpawnChunk(Vector3 RelativePosition)
     {
         GameObject chunk = Instantiate(ChunkPrefab, PlayerObject.transform.position + RelativePosition, Quaternion.identity);
 
-        PopulateChunk(chunk);
+        PopulateBlockchain(chunk.GetComponent<ChunkScript>());
 
         return chunk;
     }
 
-    // Chunky goodness
-    void PopulateChunk(GameObject Chunk)
+    // Responsible for hashing and enlisting blocks into blockchain
+    void PopulateBlockchain(ChunkScript Chunk)
     {
-
-
-
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Chunk movement
-        foreach (GameObject chunk in CurrentChunks)
+        Sector test = (Sector)Random.Range(0, 3);
+        test = 0;
+        switch (test)
         {
-            Vector3 newPosition = chunk.transform.position;
-            newPosition.x += WorldSpeed * Time.deltaTime;
-            chunk.transform.position = newPosition;
-        }
+            case Sector.SideTrains:
+                Chunk.AddObstacle(ObstacleType.Train, 0, 6 * 5);
+                Chunk.AddObstacle(ObstacleType.Train, 2, 6 * 8);
 
-        // Cull destroy check
-        if (CurrentChunks[0].transform.position.x > 55.0f) 
-        { 
-            Destroy(CurrentChunks[0]);
-            CurrentChunks[0] = CurrentChunks[1];
-            CurrentChunks[1] = SpawnChunk(new Vector3(-145.0f, -1.0f, 0.5f));
+                for (int i = 0; i < 16; i++)
+                {
+                    bool shouldSpawn = Random.Range(0, 3) == 0;
+                    if (!shouldSpawn) continue;
+
+                    int obstacleType = Random.Range(1, 3);
+                    Chunk.AddObstacle((ObstacleType)obstacleType, 1, 6 * i);
+                }
+                break;
+            case Sector.LeftTrain:
+                break;
+            case Sector .RightTrain:
+                break;
         }
 
     }
