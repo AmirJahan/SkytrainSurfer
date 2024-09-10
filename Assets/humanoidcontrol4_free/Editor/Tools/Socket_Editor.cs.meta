@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6904d137e4f825c43a6f23e0b07d1a7d
+timeCreated: 1548746545
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Socket_Editor.cs
+  uploadId: 638813

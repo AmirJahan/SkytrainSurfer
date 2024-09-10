@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e1d210873342b2447af00b3c5c052fc2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Scripts/HumanoidSpawnPoint.cs
+  uploadId: 638813

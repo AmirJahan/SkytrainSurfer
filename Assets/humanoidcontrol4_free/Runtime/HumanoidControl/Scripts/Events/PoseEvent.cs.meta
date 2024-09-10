@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 66065595c20d4cf45b847e26c824b4d3
+timeCreated: 1551284370
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Events/PoseEvent.cs
+  uploadId: 638813

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f63da22be8a7aad4382c985d63e1d330
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: possessions
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Prefabs/Objects/Gun.prefab
+  uploadId: 638813

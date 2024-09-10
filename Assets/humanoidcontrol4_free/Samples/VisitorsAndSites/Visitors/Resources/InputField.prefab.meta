@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 99428db08b8657c42bd80c6586eafef5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/Resources/InputField.prefab
+  uploadId: 638813

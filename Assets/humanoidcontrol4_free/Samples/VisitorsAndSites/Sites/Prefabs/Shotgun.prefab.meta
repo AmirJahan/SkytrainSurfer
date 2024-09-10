@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d29e945fa6df5234c8768efb2bdb872b
+timeCreated: 1565170018
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/Prefabs/Shotgun.prefab
+  uploadId: 638813

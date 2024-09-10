@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9f2bb348f056e3346ad72b153f1039d9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Vegetation_Bark_Ponderosa.mat
+  uploadId: 638813

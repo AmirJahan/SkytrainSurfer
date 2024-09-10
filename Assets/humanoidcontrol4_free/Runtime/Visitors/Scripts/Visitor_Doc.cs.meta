@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2667484ed9c99d0468a4ac8f78fd250f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Visitors/Scripts/Visitor_Doc.cs
+  uploadId: 638813

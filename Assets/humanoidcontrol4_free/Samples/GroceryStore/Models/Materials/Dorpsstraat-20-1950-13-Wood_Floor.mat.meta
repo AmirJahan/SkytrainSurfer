@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d72e30ffb5582244187eb875d1c8c558
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Dorpsstraat-20-1950-13-Wood_Floor.mat
+  uploadId: 638813

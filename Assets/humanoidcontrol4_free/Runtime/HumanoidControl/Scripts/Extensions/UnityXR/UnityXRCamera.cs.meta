@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ae1d863e170753b40933b6d8f2c4e44b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Extensions/UnityXR/UnityXRCamera.cs
+  uploadId: 638813

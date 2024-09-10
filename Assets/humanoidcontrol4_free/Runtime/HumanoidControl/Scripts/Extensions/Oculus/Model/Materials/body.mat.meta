@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc4ce78998ea26f49ae2822739896d1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Extensions/Oculus/Model/Materials/body.mat
+  uploadId: 638813

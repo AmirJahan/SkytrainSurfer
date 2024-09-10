@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98f919653bb51974181780de6a9c7ead
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: grocerystore
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/GroceryStore.unity
+  uploadId: 638813

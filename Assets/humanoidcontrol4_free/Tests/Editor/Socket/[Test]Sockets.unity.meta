@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 20750a6b085f4a5489a771b5dbf11102
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Editor/Socket/[Test]Sockets.unity
+  uploadId: 638813

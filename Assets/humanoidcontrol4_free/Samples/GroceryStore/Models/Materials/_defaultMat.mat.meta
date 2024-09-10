@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4cacba623172ff43ba636a7792c9d41
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/_defaultMat.mat
+  uploadId: 638813

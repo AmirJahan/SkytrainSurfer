@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 389aa2230378d8945b00c9f585441f85
+timeCreated: 1564207660
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Script_Editor.cs
+  uploadId: 638813

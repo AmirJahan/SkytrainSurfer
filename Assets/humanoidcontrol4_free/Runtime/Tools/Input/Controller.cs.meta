@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 12ea63882b6aefe4cac0f6fde8715af2
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Input/Controller.cs
+  uploadId: 638813

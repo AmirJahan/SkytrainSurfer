@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ef7cbc5bb2a2a4848bfbc89f5caec218
+timeCreated: 1557321476
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Tools/CalibrationPoint.cs
+  uploadId: 638813

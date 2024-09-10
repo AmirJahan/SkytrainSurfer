@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 41a22da0baa2641429dad593e4db6cbe
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/OllandPlateau2-3-SUDCColor001.mat
+  uploadId: 638813

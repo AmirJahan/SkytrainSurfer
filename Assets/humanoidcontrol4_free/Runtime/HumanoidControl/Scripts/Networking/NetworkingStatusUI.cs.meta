@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 4bd359269da5de0498ca2892f8311777
+timeCreated: 1571670226
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Networking/NetworkingStatusUI.cs
+  uploadId: 638813

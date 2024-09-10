@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e6d48db11ac8f8348b25a17eac364064
+timeCreated: 1495031860
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/AvatarShop/Models/SpaceRobotKyle/Materials/Robot.mat
+  uploadId: 638813

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fe76bdb4c3092db4480a5145f2d82ccc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Prefabs/Characters/MakeHuman_simple_TP.prefab
+  uploadId: 638813

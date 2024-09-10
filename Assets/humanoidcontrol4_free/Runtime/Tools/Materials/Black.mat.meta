@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f55a91f15ddc78d46ade3f69aa5feb9d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Materials/Black.mat
+  uploadId: 638813

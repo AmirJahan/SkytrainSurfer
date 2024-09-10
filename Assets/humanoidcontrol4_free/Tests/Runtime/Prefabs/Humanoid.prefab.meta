@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a9cbb74c6bc91624983fd99431b32a61
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: possessions
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Runtime/Prefabs/Humanoid.prefab
+  uploadId: 638813

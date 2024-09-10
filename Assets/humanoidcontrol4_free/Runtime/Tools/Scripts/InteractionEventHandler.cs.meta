@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b9d54c0228cf61b48be0fd5a3b42069c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Scripts/InteractionEventHandler.cs
+  uploadId: 638813

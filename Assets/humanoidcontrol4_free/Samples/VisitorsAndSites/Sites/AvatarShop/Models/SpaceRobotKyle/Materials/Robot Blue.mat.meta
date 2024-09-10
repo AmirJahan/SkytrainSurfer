@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bb9f49949757ac842ab2841fcfb10188
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/AvatarShop/Models/SpaceRobotKyle/Materials/Robot
+    Blue.mat
+  uploadId: 638813

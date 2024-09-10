@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d88ca36bf70e4a94dbbde9e2cec5e7eb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Editor/Humanoid/Materials/MakeHuman_Longsleeve.mat
+  uploadId: 638813

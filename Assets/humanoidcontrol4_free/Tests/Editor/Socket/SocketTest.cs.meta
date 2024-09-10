@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 50c15dd580f1d4044a08b1a27d70e6bd
+timeCreated: 1551084484
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Editor/Socket/SocketTest.cs
+  uploadId: 638813

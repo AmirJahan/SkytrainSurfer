@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 853fd08a3894f2748a10c79b58fdea1c
+timeCreated: 1500889569
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Interaction/Pointing
+    Interaction (Right Hand).prefab
+  uploadId: 638813

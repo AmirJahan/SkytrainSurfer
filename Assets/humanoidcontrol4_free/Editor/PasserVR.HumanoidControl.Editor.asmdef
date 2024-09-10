@@ -1,0 +1,24 @@
+{
+    "name": "PasserVR.HumanoidControl.Editor",
+    "references": [
+        "PasserVR.HumanoidControl",
+        "Passer.Visitors.Editor",
+        "PhotonUnityNetworking",
+        "PhotonVoice",
+        "PhotonVoice.PUN",
+        "PhotonRealtime",
+        "PhotonVoice.API",
+        "SteamVR"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

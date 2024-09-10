@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: dc399eafe69085649961ea3ea4bcf729
+timeCreated: 1535359025
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Libraries/Core/Vector.cs
+  uploadId: 638813

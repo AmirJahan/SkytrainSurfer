@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e970aecce96aef84f9bc21ce2909bd43
+timeCreated: 1500889557
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Interaction/Gaze
+    Interaction.prefab
+  uploadId: 638813

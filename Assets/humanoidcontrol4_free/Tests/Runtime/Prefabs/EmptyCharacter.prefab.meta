@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e8be9f1536972547a59b8ad2dc82128
+timeCreated: 1489139162
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Runtime/Prefabs/EmptyCharacter.prefab
+  uploadId: 638813

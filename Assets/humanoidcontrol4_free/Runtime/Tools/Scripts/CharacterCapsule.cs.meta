@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 54e5a508b0c034e4481df996e6979ad7
+timeCreated: 1549901260
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Scripts/CharacterCapsule.cs
+  uploadId: 638813

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa343a21ef8153f4e9c6b9c9a0715d7c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/OllandWeegschaal-4-SUDCTranslucentGlassGray.mat
+  uploadId: 638813

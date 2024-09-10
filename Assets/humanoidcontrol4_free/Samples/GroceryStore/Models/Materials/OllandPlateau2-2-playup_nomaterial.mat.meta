@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5b3bb0296dbb2ff4aac71d7c8680eb0e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/OllandPlateau2-2-playup_nomaterial.mat
+  uploadId: 638813

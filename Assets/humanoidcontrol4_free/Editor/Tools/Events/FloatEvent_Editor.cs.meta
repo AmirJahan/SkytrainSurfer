@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 22b5c2a2597b62c43ba9e2a8f3fd779d
+timeCreated: 1551345890
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Events/FloatEvent_Editor.cs
+  uploadId: 638813

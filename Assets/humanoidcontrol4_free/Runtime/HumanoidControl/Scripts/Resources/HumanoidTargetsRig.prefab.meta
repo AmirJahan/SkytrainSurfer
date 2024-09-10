@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3cec17721dc9fb0499bab2210c9bf0ac
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Resources/HumanoidTargetsRig.prefab
+  uploadId: 638813

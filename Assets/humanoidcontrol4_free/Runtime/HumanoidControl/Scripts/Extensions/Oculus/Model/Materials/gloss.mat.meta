@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 81d6471de7ed0204a98dd3ca034c3292
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Extensions/Oculus/Model/Materials/gloss.mat
+  uploadId: 638813

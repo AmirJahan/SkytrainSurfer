@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ac547295e0b7c04409774d0b733e940b
+timeCreated: 1462298140
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/HumanoidControl/Targets/FootTarget_Editor.cs
+  uploadId: 638813

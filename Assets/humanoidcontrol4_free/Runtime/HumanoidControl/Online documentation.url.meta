@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 98766d76e4b52764fa8296b73664d24b
+timeCreated: 1472981280
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Online documentation.url
+  uploadId: 638813

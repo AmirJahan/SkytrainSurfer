@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: def06cb2d19a8f74b8f61ea42324f172
+timeCreated: 1573641610
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Networking/Resources/HumanoidPlayer.prefab
+  uploadId: 638813

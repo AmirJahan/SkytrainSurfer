@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 103197f2c61eb0840b7dbbb5010d4e33
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/d20-Voordeur-4-SUDCColorB19.mat
+  uploadId: 638813

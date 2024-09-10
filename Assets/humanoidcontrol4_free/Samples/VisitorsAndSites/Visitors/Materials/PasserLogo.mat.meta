@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 141fe6d66c6804b489c3d87c5a35e04f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/Materials/PasserLogo.mat
+  uploadId: 638813

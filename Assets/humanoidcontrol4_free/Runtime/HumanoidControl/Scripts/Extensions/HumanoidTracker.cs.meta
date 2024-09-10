@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0fe405b63a2e3fa4e9907008bf910c57
+timeCreated: 1486189585
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Extensions/HumanoidTracker.cs
+  uploadId: 638813

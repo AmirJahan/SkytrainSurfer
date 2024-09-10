@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 62071d4412254194b8b09d75dbbf1e81
+timeCreated: 1537941173
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/TriggerEventHandler_Editor.cs
+  uploadId: 638813

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 227761d0ea6475644874030e59233561
+timeCreated: 1551447470
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Events/Vector3Event.cs
+  uploadId: 638813

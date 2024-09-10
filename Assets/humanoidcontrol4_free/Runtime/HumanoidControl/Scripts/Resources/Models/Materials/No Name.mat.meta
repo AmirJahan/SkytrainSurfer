@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a85626db694b4b64aa5b9f475236c885
+timeCreated: 1486644078
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Resources/Models/Materials/No
+    Name.mat
+  uploadId: 638813

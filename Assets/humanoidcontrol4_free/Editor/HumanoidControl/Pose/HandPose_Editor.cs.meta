@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d949b2c3b0af78f42ba4bb69313ff32a
+timeCreated: 1515774271
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/HumanoidControl/Pose/HandPose_Editor.cs
+  uploadId: 638813

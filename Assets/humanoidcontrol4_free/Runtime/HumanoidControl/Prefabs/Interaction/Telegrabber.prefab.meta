@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bcdd858be91b5e848a0084fc0e8d680e
+timeCreated: 1536834276
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Interaction/Telegrabber.prefab
+  uploadId: 638813

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3372ac7dec0481c468372ccbac9ae38e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Characters/Materials/MakeHuman_Skin.mat
+  uploadId: 638813

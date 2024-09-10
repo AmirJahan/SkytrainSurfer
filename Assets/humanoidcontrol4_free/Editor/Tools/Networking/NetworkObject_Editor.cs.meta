@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d524512d4937bcd438187a8a13482a40
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Networking/NetworkObject_Editor.cs
+  uploadId: 638813

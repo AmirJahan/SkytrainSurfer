@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1c1a1182e446eb34589ed0ffb95bea2f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: objecttable
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/ObjectTable.unity
+  uploadId: 638813

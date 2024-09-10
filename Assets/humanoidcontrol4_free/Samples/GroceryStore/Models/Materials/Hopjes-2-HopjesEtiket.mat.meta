@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 54445ec79436c5541aa392b4a5eb0263
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Hopjes-2-HopjesEtiket.mat
+  uploadId: 638813

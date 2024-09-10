@@ -1,0 +1,27 @@
+{
+    "name": "PasserVR.HumanoidControl",
+    "references": [
+        "UnityEditor.SpatialTracking",
+        "UnityEngine.SpatialTracking",
+        "Unity.InputSystem",
+        "PhotonUnityNetworking",
+        "PhotonVoice",
+        "PhotonRealtime",
+        "PhotonVoice.PUN",
+        "PhotonVoice.API",
+        "LeapMotion",
+        "LeapMotion.LeapCSharp",
+		"Ultraleap.Tracking.Core",
+        "SteamVR",
+        "Unity.XR.OpenVR"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

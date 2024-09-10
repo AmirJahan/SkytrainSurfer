@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b145fce870893ef41b25a51f4aa8c95f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Prefabs/Dorpsstraat-20-collider.prefab
+  uploadId: 638813

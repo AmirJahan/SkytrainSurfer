@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: abecdb5abc531504594f473692b50a21
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: shootingrange_possessions
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/Prefabs/Gun.prefab
+  uploadId: 638813

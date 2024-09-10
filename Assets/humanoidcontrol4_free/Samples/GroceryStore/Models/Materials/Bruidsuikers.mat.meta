@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4bcc9e4b3581bf47b18aa0b2b283e76
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Bruidsuikers.mat
+  uploadId: 638813

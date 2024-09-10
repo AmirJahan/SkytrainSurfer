@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eb03bf4e121b69940a3f17aa0c029ed4
+timeCreated: 1534835017
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Pose/PoseMixer.cs
+  uploadId: 638813

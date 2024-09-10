@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e35bc9ff721798f44baf9f2764137667
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: socialspace
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/SocialSpace.unity
+  uploadId: 638813

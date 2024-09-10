@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eb3310a2943ad7741b6c53520f451c91
+timeCreated: 1456860319
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Targets/FootTarget.cs
+  uploadId: 638813

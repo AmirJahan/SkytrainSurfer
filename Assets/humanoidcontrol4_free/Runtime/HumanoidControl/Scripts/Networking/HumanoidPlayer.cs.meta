@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eb69cd2012a95b549a6c414c3619432c
+timeCreated: 1563430766
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Networking/HumanoidPlayer.cs
+  uploadId: 638813

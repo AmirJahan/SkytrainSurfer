@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 66d666e65a59b63408ad444de1bed1db
+timeCreated: 1518019038
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/InteractionPointer_Editor.cs
+  uploadId: 638813

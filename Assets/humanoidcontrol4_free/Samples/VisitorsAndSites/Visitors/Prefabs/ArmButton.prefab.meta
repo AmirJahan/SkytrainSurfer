@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d5e59c132d4e14f418d5c3eb03a7299f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/Prefabs/ArmButton.prefab
+  uploadId: 638813

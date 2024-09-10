@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7045099da56f4ee42bfd0bb7ba4e0355
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/OllandWeegschaal-3-292.mat
+  uploadId: 638813

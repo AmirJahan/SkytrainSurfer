@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6d2f20550b201514cb4e927eb7281965
+timeCreated: 1535359205
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Libraries/Core/Sensors/ArmController.cs
+  uploadId: 638813

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3102d98984a7abb429f15747f5740a14
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Bucket/Models/Materials/Emmer-1-Metal_Rough.mat
+  uploadId: 638813

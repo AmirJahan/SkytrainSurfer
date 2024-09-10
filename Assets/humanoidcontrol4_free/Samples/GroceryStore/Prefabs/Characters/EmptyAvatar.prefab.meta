@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 77b81819e8376b4479001dc5345d7f0b
+timeCreated: 1455880035
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Prefabs/Characters/EmptyAvatar.prefab
+  uploadId: 638813

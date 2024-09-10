@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f15c1f33a6b326e4192b1c37038640cd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Visitors/Scripts/UI/HumanoidMenu.cs
+  uploadId: 638813

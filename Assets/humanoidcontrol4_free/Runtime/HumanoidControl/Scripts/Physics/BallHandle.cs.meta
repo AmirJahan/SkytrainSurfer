@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fae343df67c3ea74da0c03a96ed0e7e8
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Physics/BallHandle.cs
+  uploadId: 638813

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 57047f37667ef1c4997b266a5e8fb62e
+timeCreated: 1506233678
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Targets/FingersTarget.cs
+  uploadId: 638813

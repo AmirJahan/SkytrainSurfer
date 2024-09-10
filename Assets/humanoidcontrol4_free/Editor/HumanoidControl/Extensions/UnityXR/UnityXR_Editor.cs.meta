@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3b70e5e81de46964eaf3d2a996040d77
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/HumanoidControl/Extensions/UnityXR/UnityXR_Editor.cs
+  uploadId: 638813

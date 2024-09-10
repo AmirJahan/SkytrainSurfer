@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0b3d881af094aa40ac3c1862af284a6
+timeCreated: 1500101595
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Networking/NetworkingStarter.prefab
+  uploadId: 638813

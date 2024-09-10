@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 07a549c0c6b97c641805800d72118217
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/Materials/OrangeUnlit.mat
+  uploadId: 638813

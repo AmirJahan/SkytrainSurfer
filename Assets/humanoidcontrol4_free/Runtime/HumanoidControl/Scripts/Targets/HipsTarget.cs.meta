@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a92bd8efd3050c94ca4271d58273b4e0
+timeCreated: 1461857393
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Targets/HipsTarget.cs
+  uploadId: 638813

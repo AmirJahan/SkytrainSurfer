@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8203c62900127304d8970ba88e8458ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Sword-1-Metal_Corrogated_Shiny.mat
+  uploadId: 638813

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 66c74601d6531f8479851bbff7409ea9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Third-Party-Notices.md
+  uploadId: 638813

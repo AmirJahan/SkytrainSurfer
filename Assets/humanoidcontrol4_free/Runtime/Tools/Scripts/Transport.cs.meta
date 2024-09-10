@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 314f94f981e120a419240d7651cb096a
+timeCreated: 1536050402
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Scripts/Transport.cs
+  uploadId: 638813

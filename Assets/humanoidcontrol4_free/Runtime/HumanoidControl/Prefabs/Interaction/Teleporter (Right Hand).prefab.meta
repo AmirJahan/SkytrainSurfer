@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7aa50343b5920fa438bb3447193bec4c
+timeCreated: 1518452745
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Interaction/Teleporter
+    (Right Hand).prefab
+  uploadId: 638813

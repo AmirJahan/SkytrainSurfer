@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1df3c9f0dd2fa4b4f9dd5e2123771df9
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Physics/HandPhysics.cs
+  uploadId: 638813

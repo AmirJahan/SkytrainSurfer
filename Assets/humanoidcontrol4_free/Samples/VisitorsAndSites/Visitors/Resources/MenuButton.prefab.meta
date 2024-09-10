@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e79350b5a6bc3d54bacb69eb9357d3d2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/Resources/MenuButton.prefab
+  uploadId: 638813

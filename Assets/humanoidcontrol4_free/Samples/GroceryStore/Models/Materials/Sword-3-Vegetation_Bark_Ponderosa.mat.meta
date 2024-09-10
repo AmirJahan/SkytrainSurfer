@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 63e3a03e5b3b86740bb9e85fb4e43296
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Sword-3-Vegetation_Bark_Ponderosa.mat
+  uploadId: 638813

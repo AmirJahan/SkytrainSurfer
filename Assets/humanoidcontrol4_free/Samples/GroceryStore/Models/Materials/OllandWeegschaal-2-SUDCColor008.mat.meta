@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 767cbbcbc4559bb49a949f791133828d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/OllandWeegschaal-2-SUDCColor008.mat
+  uploadId: 638813

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d787d11bf4aa5f4eaf9168edc11cd44
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Input/KeyboardInput_Editor.cs
+  uploadId: 638813

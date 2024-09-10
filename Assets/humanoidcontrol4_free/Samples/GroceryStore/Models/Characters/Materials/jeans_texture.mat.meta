@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cad73e08b9f208a4a8f3ab6f6d4510dd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Characters/Materials/jeans_texture.mat
+  uploadId: 638813

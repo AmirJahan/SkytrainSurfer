@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3a7f1842c1f8798438222d578dea0a3c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Visitors/HumanoidVisitor
+    VRSettings.lighting
+  uploadId: 638813

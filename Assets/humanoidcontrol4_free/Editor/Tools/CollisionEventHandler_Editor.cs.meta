@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2a99636f9dbc4494bb35f5c47a84cabd
+timeCreated: 1551351700
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/CollisionEventHandler_Editor.cs
+  uploadId: 638813

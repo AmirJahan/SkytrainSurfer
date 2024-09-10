@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74b1265b185456345a38424ac0f0ca59
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Dorpsstraat-22-1950-5-SUDCColor004.mat
+  uploadId: 638813

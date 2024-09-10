@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a10d9d6b54f516042a24a6251f4b08b0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Characters/Materials/texture.mat
+  uploadId: 638813

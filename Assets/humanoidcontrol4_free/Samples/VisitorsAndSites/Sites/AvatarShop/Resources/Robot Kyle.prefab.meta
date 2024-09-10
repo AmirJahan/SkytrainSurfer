@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f558cc7556c4ffc4594edb212b1cd0dc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: avatarshop_possessions
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/AvatarShop/Resources/Robot
+    Kyle.prefab
+  uploadId: 638813

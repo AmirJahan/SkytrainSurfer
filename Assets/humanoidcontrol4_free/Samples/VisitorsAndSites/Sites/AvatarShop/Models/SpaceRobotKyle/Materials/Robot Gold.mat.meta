@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 70712869265afed4d8c0ff477869b7b3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/VisitorsAndSites/Sites/AvatarShop/Models/SpaceRobotKyle/Materials/Robot
+    Gold.mat
+  uploadId: 638813

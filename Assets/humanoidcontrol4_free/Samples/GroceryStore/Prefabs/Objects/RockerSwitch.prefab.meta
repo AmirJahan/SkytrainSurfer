@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a2ac752412ebcdc40992f116cc66ab0d
+timeCreated: 1569253683
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Prefabs/Objects/RockerSwitch.prefab
+  uploadId: 638813

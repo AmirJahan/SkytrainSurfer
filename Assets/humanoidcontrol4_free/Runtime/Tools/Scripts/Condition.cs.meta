@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c74fde42d40c8724ea2f57c0e9df3b00
+timeCreated: 1564210580
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Scripts/Condition.cs
+  uploadId: 638813

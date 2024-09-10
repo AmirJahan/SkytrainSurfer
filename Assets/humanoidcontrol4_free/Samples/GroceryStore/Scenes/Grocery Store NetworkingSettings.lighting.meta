@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 360497dd1bdaa874cbc44ba70ff5f50f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Scenes/Grocery Store
+    NetworkingSettings.lighting
+  uploadId: 638813

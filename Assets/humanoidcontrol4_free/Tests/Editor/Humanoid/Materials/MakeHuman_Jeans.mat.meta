@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d8de52f58964a1249ba21eff416db31e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Editor/Humanoid/Materials/MakeHuman_Jeans.mat
+  uploadId: 638813

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 427fa1d1d79b1e74e83b7aee23a0725f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Tests/Runtime/Grabbing/GrabbingHumanoidTest.cs
+  uploadId: 638813

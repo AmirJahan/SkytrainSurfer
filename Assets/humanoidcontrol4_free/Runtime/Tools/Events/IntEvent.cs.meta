@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 48e6fef7650d107499b07c2d4de1d531
+timeCreated: 1564565108
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/Tools/Events/IntEvent.cs
+  uploadId: 638813

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 185ec4e1799d1ac4d867b69454f1cd0f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/HumanoidControl/Networking/PhotonPun/HumanoidPun_Editor.cs
+  uploadId: 638813

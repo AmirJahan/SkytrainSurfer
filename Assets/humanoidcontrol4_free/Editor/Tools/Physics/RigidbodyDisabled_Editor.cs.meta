@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f48772544a45cf54ca615716e584dd05
+timeCreated: 1556283473
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Physics/RigidbodyDisabled_Editor.cs
+  uploadId: 638813

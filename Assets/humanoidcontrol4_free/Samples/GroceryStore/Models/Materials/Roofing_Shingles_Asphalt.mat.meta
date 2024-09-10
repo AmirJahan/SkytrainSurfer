@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 442bef6fadab5134e9b6d4c24c38684c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Roofing_Shingles_Asphalt.mat
+  uploadId: 638813

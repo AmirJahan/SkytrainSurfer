@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 43bf26b5bf64a984ea5082013001207d
+timeCreated: 1550151605
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Editor/Tools/Events/ControllerEvent_Editor.cs
+  uploadId: 638813

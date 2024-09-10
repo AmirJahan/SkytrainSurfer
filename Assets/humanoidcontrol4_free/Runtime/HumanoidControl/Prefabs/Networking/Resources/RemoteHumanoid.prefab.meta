@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e14d34d86987c9f459a0251873a654f4
+timeCreated: 1504015809
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Prefabs/Networking/Resources/RemoteHumanoid.prefab
+  uploadId: 638813

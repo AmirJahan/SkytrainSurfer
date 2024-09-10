@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 242d59e24641f91478531553196cd98f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Poses/Body/Body
+    Sit.asset
+  uploadId: 638813

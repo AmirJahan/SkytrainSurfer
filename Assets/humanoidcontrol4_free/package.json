@@ -1,0 +1,30 @@
+{
+	"name": "com.passervr.humanoidcontrol_free",
+	"version": "4.3.1",
+	"displayName": "Humanoid Control 4 Free",
+	"description": "Humanoid Control is the next generation of human character control. It will provide you with an effortless setup for having animated characters in your environments.",
+	"unity": "2021.3",
+	"author": {
+		"name": "Passer VR",
+		"email": "support@passervr.com",
+		"url": "https://passervr.com"
+	},
+	"documentationUrl": "https://passervr.com/apis/HumanoidControl/Unity/index.html",
+	"changelogUrl": "https://gitlab.passervr.com/passer/unity/humanoidcontrol4_free/-/releases",
+	"license": "MPL-2.0",
+	"licensesUrl": "http://gitlab.passervr.com/passer/unity/humanoidcontrol4_free/-/blob/main/LICENSE",
+	"keywords": [
+		"avatar",
+		"animation",
+		"vr",
+		"virtual reality",
+		"unityxr"
+	],
+	"samples": [
+		{
+			"displayName": "Grocery Store Demo",
+			"description": "The old Grocery Store demo from previous versions",
+			"path": "Samples~/GroceryStore"
+		}
+	]
+}

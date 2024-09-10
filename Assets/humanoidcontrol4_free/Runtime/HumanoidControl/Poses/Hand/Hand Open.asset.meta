@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c52c874da441cac4d9d63d2c2650a0c2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Poses/Hand/Hand
+    Open.asset
+  uploadId: 638813

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a00e234c45847564eb97d2e1db3ce64a
+timeCreated: 1475157597
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Movements/HandMovements.cs
+  uploadId: 638813

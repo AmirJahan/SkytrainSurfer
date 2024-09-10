@@ -1,0 +1,594 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031698180132208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4771669736763168}
+  m_Layer: 0
+  m_Name: Trashcan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4771669736763168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031698180132208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4975065931719434}
+  - {fileID: 4816409604902802}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1209869418813910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4626006751856706}
+  - component: {fileID: 33328177705763436}
+  - component: {fileID: 23896881307821106}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4626006751856706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209869418813910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.009, z: 0}
+  m_LocalScale: {x: 0.28, y: 0.01, z: 0.28}
+  m_Children: []
+  m_Father: {fileID: 4816409604902802}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33328177705763436
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209869418813910}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &23896881307821106
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209869418813910}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f55a91f15ddc78d46ade3f69aa5feb9d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1215184361132974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4975065931719434}
+  - component: {fileID: 33595428641948632}
+  - component: {fileID: 23536923206067052}
+  - component: {fileID: 65041954881740312}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4975065931719434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215184361132974}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.15, z: 0.3}
+  m_Children: []
+  m_Father: {fileID: 4771669736763168}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33595428641948632
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215184361132974}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &23536923206067052
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215184361132974}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4548f06e1b1a3c347bf16e59f2068e5f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &65041954881740312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215184361132974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &1361154700711664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4816409604902802}
+  - component: {fileID: 135797568582868730}
+  - component: {fileID: 114075889501766036}
+  - component: {fileID: 2805588499339821680}
+  m_Layer: 0
+  m_Name: Entry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4816409604902802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361154700711664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4626006751856706}
+  m_Father: {fileID: 4771669736763168}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &135797568582868730
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361154700711664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114075889501766036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361154700711664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8991f0c3bd0be4984ab90eff16e98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerHandlers:
+    id: 0
+    label: Trigger Event
+    tooltip: 'Call functions using the trigger collider state
+
+      Parameter: the
+      GameObject entering the trigger'
+    eventTypeLabels:
+    - Never
+    - On Trigger Enter
+    - On Trigger Exit
+    - On Trigger Stay
+    - On Trigger Empty
+    - On Trigger Change
+    - Always
+    fromEventLabel: 
+    events:
+    - eventType: 1
+      eventNetworking: 0
+      functionCall:
+        targetGameObject: {fileID: 1361154700711664}
+        methodName: Passer.Destroyer/Destroy
+        parameters:
+        - fromEvent: 1
+          localProperty: From Event
+          type: 5
+          floatConstant: 0
+          intConstant: 0
+          boolConstant: 0
+          stringConstant: 
+          vector3Constant: {x: 0, y: 0, z: 0}
+          gameObjectConstant: {fileID: 0}
+          rigidbodyConstant: {fileID: 0}
+      boolInverse: 0
+      overrideMode: 0
+  leftInputEvents:
+  - id: 0
+    label: Left Vertical
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 1
+    label: Left Horizontal
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 2
+    label: Left Stick Button
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 3
+    label: Left Button 1
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 4
+    label: Left Button 2
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 5
+    label: Left Button 3
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 6
+    label: Left Button 4
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 7
+    label: Left Trigger 1
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 8
+    label: Left Trigger 2
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 9
+    label: Left Option
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  rightInputEvents:
+  - id: 0
+    label: Right Vertical
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 1
+    label: Right Horizontal
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 2
+    label: Right Stick Button
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 3
+    label: Right Button 1
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 4
+    label: Right Button 2
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 5
+    label: Right Button 3
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 6
+    label: Right Button 4
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 7
+    label: Right Trigger 1
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 8
+    label: Right Trigger 2
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+  - id: 9
+    label: Right Option
+    tooltip: 
+    eventTypeLabels:
+    - Never
+    - On Press
+    - On Release
+    - While Down
+    - While Up
+    - On Change
+    - Continuous
+    fromEventLabel: 
+    events: []
+    defaultParameterProperty: 
+--- !u!114 &2805588499339821680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361154700711664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f1263dc17745042986d64d3fc85479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

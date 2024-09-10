@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97493460a00258b47a4607beee35cb5e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Samples/GroceryStore/Models/Materials/Sword2-0112_SlateBlue.mat
+  uploadId: 638813

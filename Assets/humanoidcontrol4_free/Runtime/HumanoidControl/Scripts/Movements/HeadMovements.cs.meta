@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 24b9b7beaeff72c41acfda9b9ecb109f
+timeCreated: 1436986734
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208700
+  packageName: Humanoid Control Free
+  packageVersion: 4.3.1
+  assetPath: Assets/humanoidcontrol4_free/Runtime/HumanoidControl/Scripts/Movements/HeadMovements.cs
+  uploadId: 638813
