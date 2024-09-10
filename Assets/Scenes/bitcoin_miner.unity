@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 793224951}
   - component: {fileID: 793224950}
   - component: {fileID: 793224954}
+  - component: {fileID: 793224955}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -457,8 +458,35 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &793224955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793224949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62abc43164167ce48a568e4afbbfb9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hopIncrement: 25
+  hopSpeed: 2
+  jumpHeight: 2
+  jumpSpeed: 2
+  jumpHangTime: 0.5
+  hasJumped: 0
+  currentHealth: 100
+  maxtHealth: 100
+  obstacleDamage: 10
+  slideDuration: 0.5
+  slideTransitionTime: 0.25
+  fastFallMultiplier: 150
+  lane: 0
+  pauseInput: 0
+  isAlive: 1
 --- !u!1 &1043621602
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,4 +859,4 @@ SceneRoots:
   - {fileID: 793224953}
   - {fileID: 35283264}
   - {fileID: 2031751232}
-
+  - {fileID: 164267132}
