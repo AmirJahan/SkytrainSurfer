@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
 
     private void Start()
     {
+        
         coins = 0;
     }
 
