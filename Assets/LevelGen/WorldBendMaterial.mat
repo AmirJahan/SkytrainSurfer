@@ -43,10 +43,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Backwards_Strength: -0.001
+    - _Backwards_Strength: 0.00056
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Sideways_Strength: -0.001
+    - _Sideways_Strength: -0.00142
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
