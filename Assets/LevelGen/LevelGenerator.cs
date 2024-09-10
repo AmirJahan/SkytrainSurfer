@@ -11,8 +11,9 @@ public enum Sector
 
 public class LevelGenerator : MonoBehaviour
 {
-
     public static LevelGenerator Instance;
+
+    [Gonk(512)]
 
     [SerializeField]
     GameObject ChunkPrefab;
@@ -25,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField]
     public float WorldSpeed = 10.0f;
-
+    
     private void Awake()
     {
         Instance = this;
@@ -43,11 +44,12 @@ public class LevelGenerator : MonoBehaviour
     {
         Vector3 SpawnPos = PlayerObject.transform.position;
         SpawnPos.y = 0.0f;
+        SpawnPos.z = 0.0f;
         SpawnPos += RelativePosition;
         GameObject chunk = Instantiate(ChunkPrefab, SpawnPos, Quaternion.identity);
 
         PopulateChunk(chunk.GetComponent<ChunkScript>());
-
+        
         return chunk;
     }
 
@@ -61,7 +63,9 @@ public class LevelGenerator : MonoBehaviour
         {
             case Sector.SideTrains:
                 {
-                    int sector = Random.Range(1, 8) * 6;
+                    Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
+
+                    int sector = Random.Range(2, 8) * 6;
                     Chunk.AddObstacle(ObstacleType.Train, 0, sector);
                     Chunk.AddObstacle(ObstacleType.Train, 2, sector);
 
@@ -77,6 +81,8 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             case Sector.LeftTrain:
+                Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
+
                 Chunk.AddObstacle(ObstacleType.Train, 1, 6 * 5);
                 Chunk.AddObstacle(ObstacleType.Train, 2, 6 * 8);
 
@@ -90,6 +96,8 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             case Sector .RightTrain:
+                Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
+
                 Chunk.AddObstacle(ObstacleType.Train, 0, 6 * 5);
                 Chunk.AddObstacle(ObstacleType.Train, 1, 6 * 8);
 
@@ -104,7 +112,9 @@ public class LevelGenerator : MonoBehaviour
                 break;
             case Sector.LeftMiddleTrains:
                 {
-                    int sector = Random.Range(1, 8) * 6;
+                    Chunk.AddObstacle(ObstacleType.Coin, 2, 6);
+
+                    int sector = Random.Range(2, 8) * 6;
                     Chunk.AddObstacle(ObstacleType.Train, 0, sector);
                     Chunk.AddObstacle(ObstacleType.Train, 1, sector);
 
@@ -120,7 +130,9 @@ public class LevelGenerator : MonoBehaviour
                 }
             case Sector.RightMiddleTrains:
                 {
-                    int sector = Random.Range(1, 8) * 6;
+                    Chunk.AddObstacle(ObstacleType.Coin, 0, 6);
+
+                    int sector = Random.Range(2, 8) * 6;
                     Chunk.AddObstacle(ObstacleType.Train, 1, sector);
                     Chunk.AddObstacle(ObstacleType.Train, 2, sector);
 
