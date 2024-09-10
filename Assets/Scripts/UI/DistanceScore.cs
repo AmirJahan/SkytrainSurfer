@@ -6,12 +6,11 @@ public class DistanceScore : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private TextMeshProUGUI distText;
 
-    private int dist = 0;
+    private int dist;
 
     private void Start()
     {
-        transform.position = player.position;
-        dist = 0;
+        transform.position = player.transform.position;
     }
 
     private void Update()
