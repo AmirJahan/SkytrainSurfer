@@ -29,6 +29,8 @@ public class CoinCollision : MonoBehaviour
         {
             Coin.instance.AddScore();
             OnCoinPicked?.Invoke();
+            AudioManager.Instance.PlaySFX("CoinPickUp");
+           
             if (coinCollectionEffect)
                 coinCollectionEffect.Play();
             Debug.Log("COLLECTED COIN");
