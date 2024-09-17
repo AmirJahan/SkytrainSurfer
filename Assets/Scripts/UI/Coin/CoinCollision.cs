@@ -8,6 +8,7 @@ public class CoinCollision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Coin.instance.AddScore();
             OnCoinPicked?.Invoke();
             Destroy(gameObject);
         }
