@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 514960903529798325}
   - component: {fileID: 4540624906884751607}
   - component: {fileID: 195682105144233735}
+  - component: {fileID: 2553683698904880315}
+  - component: {fileID: 2470921134335164878}
+  - component: {fileID: 3270212479696958011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,3 +112,70 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2553683698904880315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165844198091301238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62abc43164167ce48a568e4afbbfb9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hopIncrement: 5
+  hopSpeed: 2
+  jumpHeight: 2
+  jumpSpeed: 2
+  jumpHangTime: 0.5
+  hasJumped: 0
+  currentHealth: 100
+  maxtHealth: 100
+  obstacleDamage: 10
+  slideDuration: 0.5
+  slideTransitionTime: 0.25
+  fastFallMultiplier: 150
+  lane: 0
+  pauseInput: 0
+  isAlive: 1
+--- !u!54 &2470921134335164878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165844198091301238}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 114
+  m_CollisionDetection: 0
+--- !u!114 &3270212479696958011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165844198091301238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6df9bf7ae9a954d8d00be71049cd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSwipeDistance: 10

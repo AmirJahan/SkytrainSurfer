@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     bool isAlive = true;
 
     private Rigidbody rb;
-
+    private PlayerInput input;
     private CapsuleCollider col;
     
     private void OnValidate()
@@ -88,7 +88,16 @@ public class PlayerController : MonoBehaviour
                 rb = gameObject.AddComponent<Rigidbody>();
             }
             
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
+            
+        }
+        
+        if (!input)
+        {
+            if (!(input = GetComponent<PlayerInput>()))
+            {
+                input = gameObject.AddComponent<PlayerInput>();
+            }
             
         }
     }
@@ -112,27 +121,27 @@ public class PlayerController : MonoBehaviour
             // don't accept input if the player is in the middle of an action
             if (!pauseInput)
             {
-
-                // Player inputs
-                if (Input.GetKeyDown(KeyCode.A))
+                Vector2 moveDir = input.MoveDir;
+                
+                int xIn = Mathf.RoundToInt( moveDir.x );
+                if (xIn != 0)
                 {
-                    StartCoroutine(HopToSide(-1));
+                    StartCoroutine(HopToSide(xIn) );
                 }
-
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    StartCoroutine(HopToSide(1));
-                }
-
-                if (Input.GetKeyDown(KeyCode.Space))
+                
+                int yIn = Mathf.RoundToInt( moveDir.y );
+                
+                if (yIn > 0)
                 {
                     StartCoroutine(Jump());
                 }
 
-                if (Input.GetKeyDown(KeyCode.S))
+                if (yIn < 0)
                 {
                     StartCoroutine(Slide());
+
                 }
+
             }
 
 
@@ -142,6 +151,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Causes the player to hop left or right
+    // NOTE it is restricted from moving forwards or backwards. Change it if it is needed above
     IEnumerator HopToSide(int direction)
     {
         // Don't allow the player to hop if they are at the edge of the screen
@@ -152,12 +162,12 @@ public class PlayerController : MonoBehaviour
         lane += direction;
         
         // The target hop position
-        float targetX = transform.position.x + (hopIncrement * direction);
+        float targetX = transform.position.z + (hopIncrement * direction);
 
         int startedLayer = lane;
         float startedY = transform.position.y;
         // The destination of the player
-        Vector3 dest = new Vector3(targetX, transform.position.y, transform.position.z);
+        Vector3 dest = new Vector3(transform.position.x, transform.position.y, targetX);
 
         // Lerp the palyer to it's new position
         while (Vector3.Distance(transform.position, dest) > 0.1f)
@@ -165,15 +175,14 @@ public class PlayerController : MonoBehaviour
             if (lane != startedLayer || transform.position.y != startedLayer)
             {
                 startedY = transform.position.y;
-                dest = new Vector3(targetX, transform.position.y, transform.position.z);
+                dest = new Vector3(transform.position.x, transform.position.y, targetX);
             }
             
             // move the player the next step
-            float newPosition = Mathf.Lerp(transform.position.x, targetX, hopSpeed);
-            rb.MovePosition(new Vector3(newPosition, transform.position.y, transform.position.z));
+            float newPosition = Mathf.Lerp(transform.position.z, targetX, hopSpeed);
+            rb.MovePosition(new Vector3(transform.position.x, transform.position.y, newPosition));
 
             yield return new WaitForFixedUpdate();
-            Debug.Log("one");
         }
         
         pauseInput = false;
