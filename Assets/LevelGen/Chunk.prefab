@@ -23383,12 +23383,12 @@ MonoBehaviour:
   - {fileID: 895495500235331631}
   ObstaclePrefabs:
   - {fileID: 5917597671787085819, guid: a10d33d1ea187b642b215cd355ea2238, type: 3}
-  - {fileID: 4213386214944941476, guid: 3225d96972fa0b74fb1f6e51b4304eb5, type: 3}
+  - {fileID: 6989511923534663462, guid: 19bf59b96788a424b9ebc564fb2ec06d, type: 3}
   - {fileID: 6727351107679019785, guid: 85405f56f8d94da44a2e5384cc744ef6, type: 3}
   ObstaclePrefabsWithCoins:
-  - {fileID: 5917597671787085819, guid: a10d33d1ea187b642b215cd355ea2238, type: 3}
-  - {fileID: 4213386214944941476, guid: 3225d96972fa0b74fb1f6e51b4304eb5, type: 3}
-  - {fileID: 6727351107679019785, guid: 85405f56f8d94da44a2e5384cc744ef6, type: 3}
+  - {fileID: 8815448893347046259, guid: 9c6358f892d0cb240848a08d77caa521, type: 3}
+  - {fileID: 6892106364734440251, guid: deaf2caa0ceef2048819ef60a168bee6, type: 3}
+  - {fileID: 6517102398231804957, guid: 019f267a9098e4f43a3428c65a0b1fe2, type: 3}
 --- !u!1 &5399430247103271456
 GameObject:
   m_ObjectHideFlags: 0
