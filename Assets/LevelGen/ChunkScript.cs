@@ -17,6 +17,9 @@ public class ChunkScript : MonoBehaviour
 
     [SerializeField] private GameObject[] ObstaclePrefabs;
 
+
+    [SerializeField] private GameObject[] ObstaclePrefabsWithCoins;
+
     private void Update()
     {
         Vector3 newPosition = transform.position;
@@ -58,7 +61,16 @@ public class ChunkScript : MonoBehaviour
         Location.y += heightOffset;
         Location.z += -2 + lane * 2;
 
-        GameObject Obstacle = Instantiate(ObstaclePrefabs[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
+        GameObject Obstacle;
+        if (Random.value < 0.5f)
+        {
+           // Obstacle = Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, Quaternion.identity);
+            Obstacle =  Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
+        }
+        else
+        {
+            Obstacle = Instantiate(ObstaclePrefabs[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
+        }
         Obstacle.transform.SetParent(transform, true);
     }
 }
