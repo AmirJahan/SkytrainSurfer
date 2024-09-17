@@ -34,7 +34,17 @@ public class CoinCollision : MonoBehaviour
             if (coinCollectionEffect)
                 coinCollectionEffect.Play();
             Debug.Log("COLLECTED COIN");
-            Destroy(gameObject);
+            
+            // Disable the coin visual representation
+            GetComponent<MeshRenderer>().enabled = false;
+            StartCoroutine(DestroyAfterLoad());
+
         }
+    }
+
+    IEnumerator DestroyAfterLoad()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }
