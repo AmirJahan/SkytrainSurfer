@@ -18,7 +18,7 @@ public class Authentication : MonoBehaviour
     {
         Instance = this;
         await InitUGS();
-        //SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     private async Task InitUGS()
