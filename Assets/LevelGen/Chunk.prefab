@@ -23385,7 +23385,10 @@ MonoBehaviour:
   - {fileID: 5917597671787085819, guid: a10d33d1ea187b642b215cd355ea2238, type: 3}
   - {fileID: 4213386214944941476, guid: 3225d96972fa0b74fb1f6e51b4304eb5, type: 3}
   - {fileID: 6727351107679019785, guid: 85405f56f8d94da44a2e5384cc744ef6, type: 3}
-  - {fileID: 2717711486022291176, guid: bd34a8011d743da45ace518e3ac52b1e, type: 3}
+  ObstaclePrefabsWithCoins:
+  - {fileID: 5917597671787085819, guid: a10d33d1ea187b642b215cd355ea2238, type: 3}
+  - {fileID: 4213386214944941476, guid: 3225d96972fa0b74fb1f6e51b4304eb5, type: 3}
+  - {fileID: 6727351107679019785, guid: 85405f56f8d94da44a2e5384cc744ef6, type: 3}
 --- !u!1 &5399430247103271456
 GameObject:
   m_ObjectHideFlags: 0

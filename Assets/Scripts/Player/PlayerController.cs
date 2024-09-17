@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -120,8 +121,8 @@ public class PlayerController : MonoBehaviour
         // the player should have full health at the start
         currentHealth = maxtHealth;
         
-        jumpEffect = Instantiate(jumpEffectPrefab, transform).GetComponent<VisualEffect>();
-        jumpEffect.resetSeedOnPlay = true;
+        //jumpEffect = Instantiate(jumpEffectPrefab, transform).GetComponent<VisualEffect>();
+       // jumpEffect.resetSeedOnPlay = true;
     }
 
     
@@ -319,11 +320,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hasJumped = false;
-        pauseInput = false;
-        fastFall = false;
         
-        animation.UpdateGrounded(true);
         
         if (other.gameObject.CompareTag("Obstacle"))
         {
@@ -331,6 +328,14 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        hasJumped = false;
+        pauseInput = false;
+        fastFall = false;
+
+        animation.UpdateGrounded(true);
     }
 
 
