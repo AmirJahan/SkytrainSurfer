@@ -3,19 +3,27 @@ using UnityEngine;
 
 public class DistanceScore : MonoBehaviour
 {
+    public static DistanceScore instance;
+    
     [SerializeField] private Transform player;
     [SerializeField] private TextMeshProUGUI distText;
+    [SerializeField] private GameObject LeaderboardCanvas;
 
-    private int dist;
+    public int dist;
 
     private void Start()
     {
+        instance = this;
         transform.position = player.transform.position;
     }
 
     private void Update()
     {
         UpdateScoreText();
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LeaderboardCanvas.SetActive(true);
+        }
     }
 
     private void UpdateScoreText()

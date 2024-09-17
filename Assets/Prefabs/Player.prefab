@@ -127,8 +127,8 @@ MonoBehaviour:
   hopIncrement: 5
   hopSpeed: 2
   jumpHeight: 2
-  jumpSpeed: 2
-  jumpHangTime: 0.5
+  jumpSpeed: 0.2
+  jumpHangTime: 0.1
   hasJumped: 0
   currentHealth: 100
   maxtHealth: 100

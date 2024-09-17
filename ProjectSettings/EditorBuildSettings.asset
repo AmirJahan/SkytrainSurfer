@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/XavTestGym.unity
+    guid: 94968ad6b8679477ebbe137970e375a0
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: eaae85592b3a2f64f9ae06d0cfaa763d
   - enabled: 1
-    path: Assets/Scenes/XavTestGym.unity
-    guid: 94968ad6b8679477ebbe137970e375a0
+    path: Assets/Scenes/bitcoin_miner.unity
+    guid: 5359e68860b9f8942a7cd8082d8e4b9c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
