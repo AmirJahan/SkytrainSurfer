@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -299,6 +300,7 @@ public class PlayerController : MonoBehaviour
         {
             // destrpy tje obstacle
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
         
     }

@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bitcoin_miner.unity
     guid: 5359e68860b9f8942a7cd8082d8e4b9c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 2a5e4eecb9ae9405696ae734022e5358
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
