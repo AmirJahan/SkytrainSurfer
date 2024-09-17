@@ -84,8 +84,10 @@ public class PlayerController : MonoBehaviour
     
     [Header("Effects")]
     [SerializeField, Tooltip("The effect for when the player jumps")] GameObject jumpEffectPrefab;
+    [SerializeField, Tooltip("The effect for when the player moves")] GameObject moveEffectPrefab;
     
     VisualEffect jumpEffect;
+    private VisualEffect moveEffect;
 
     
     private void OnValidate()
@@ -121,8 +123,27 @@ public class PlayerController : MonoBehaviour
         // the player should have full health at the start
         currentHealth = maxtHealth;
         
-        //jumpEffect = Instantiate(jumpEffectPrefab, transform).GetComponent<VisualEffect>();
-       // jumpEffect.resetSeedOnPlay = true;
+        VisualEffect je = Instantiate(jumpEffectPrefab, transform).GetComponent<VisualEffect>();
+        VisualEffect me = Instantiate(moveEffectPrefab, transform).GetComponent<VisualEffect>();
+        if (je)
+        {
+            jumpEffect = je;
+            jumpEffect.resetSeedOnPlay = true;
+        }
+        else
+        {
+            Debug.Log("No jump effect prefab assigned to the player controller");
+        }
+        
+        if (me)
+        {
+            moveEffect = me;
+            moveEffect.resetSeedOnPlay = true;
+        }
+        else
+        {
+            Debug.Log("No move effect prefab assigned to the player controller");
+        }
     }
 
 
