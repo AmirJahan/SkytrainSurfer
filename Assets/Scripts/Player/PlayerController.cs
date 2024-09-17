@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     bool isAlive = true;
 
     private Rigidbody rb;
-
+    private PlayerInput input;
     private CapsuleCollider col;
     
     private void OnValidate()
@@ -89,6 +89,15 @@ public class PlayerController : MonoBehaviour
             }
             
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
+            
+        }
+        
+        if (!input)
+        {
+            if (!(input = GetComponent<PlayerInput>()))
+            {
+                input = gameObject.AddComponent<PlayerInput>();
+            }
             
         }
     }
@@ -112,27 +121,27 @@ public class PlayerController : MonoBehaviour
             // don't accept input if the player is in the middle of an action
             if (!pauseInput)
             {
-
-                // Player inputs
-                if (Input.GetKeyDown(KeyCode.A))
+                Vector2 moveDir = input.MoveDir;
+                
+                int xIn = Mathf.RoundToInt( moveDir.x );
+                if (xIn != 0)
                 {
-                    StartCoroutine(HopToSide(-1));
+                    StartCoroutine(HopToSide(xIn) );
                 }
-
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    StartCoroutine(HopToSide(1));
-                }
-
-                if (Input.GetKeyDown(KeyCode.Space))
+                
+                int yIn = Mathf.RoundToInt( moveDir.y );
+                
+                if (yIn > 0)
                 {
                     StartCoroutine(Jump());
                 }
 
-                if (Input.GetKeyDown(KeyCode.S))
+                if (yIn < 0)
                 {
                     StartCoroutine(Slide());
+
                 }
+
             }
 
 
