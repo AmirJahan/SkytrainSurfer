@@ -40,13 +40,13 @@ public class ChunkScript : MonoBehaviour
         switch (obstacle)
         {
             case ObstacleType.Train:
-                heightOffset = 2.0f;
+                heightOffset = 0.5f;
                 break;
             case ObstacleType.JumpBarricade:
-                heightOffset = 1.0f;
+                heightOffset = 0.5f;
                 break;
             case ObstacleType.RollBarricade:
-                heightOffset = 1.0f;
+                heightOffset = 0.5f;
                 break;
             case ObstacleType.Coin:
                 heightOffset = 1.5f;
@@ -58,10 +58,7 @@ public class ChunkScript : MonoBehaviour
         Location.y += heightOffset;
         Location.z += -2 + lane * 2;
 
-        GameObject Obstacle = Instantiate(ObstaclePrefabs[(int)obstacle], Location, Quaternion.identity);
+        GameObject Obstacle = Instantiate(ObstaclePrefabs[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
         Obstacle.transform.SetParent(transform, true);
-
     }
-
-
 }
