@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
 {
     public static LevelGenerator Instance;
 
-    [Gonk(512)]
+    [Gonk(128)]
 
     [SerializeField]
     GameObject ChunkPrefab;
@@ -62,27 +62,23 @@ public class LevelGenerator : MonoBehaviour
         switch (randomSector)
         {
             case Sector.SideTrains:
+            {
+                int sector = Random.Range(2, 8) * 6;
+                Chunk.AddObstacle(ObstacleType.Train, 0, sector);
+                Chunk.AddObstacle(ObstacleType.Train, 2, sector);
+
+                for (int i = 0; i < 16; i++)
                 {
-                    Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
+                    bool shouldSpawn = Random.Range(0, 3) == 0;
+                    if (!shouldSpawn) continue;
 
-                    int sector = Random.Range(2, 8) * 6;
-                    Chunk.AddObstacle(ObstacleType.Train, 0, sector);
-                    Chunk.AddObstacle(ObstacleType.Train, 2, sector);
-
-                    for (int i = 0; i < 16; i++)
-                    {
-                        bool shouldSpawn = Random.Range(0, 3) == 0;
-                        if (!shouldSpawn) continue;
-
-                        int obstacleType = Random.Range(1, 3);
-                        Chunk.AddObstacle((ObstacleType)obstacleType, 1, 6 * i);
-                    }
-
+                    int obstacleType = Random.Range(1, 3);
+                    Chunk.AddObstacle((ObstacleType)obstacleType, 1, 6 * i);
                 }
                 break;
+            }
             case Sector.LeftTrain:
-                Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
-
+            {
                 Chunk.AddObstacle(ObstacleType.Train, 1, 6 * 5);
                 Chunk.AddObstacle(ObstacleType.Train, 2, 6 * 8);
 
@@ -94,10 +90,11 @@ public class LevelGenerator : MonoBehaviour
                     int obstacleType = Random.Range(1, 3);
                     Chunk.AddObstacle((ObstacleType)obstacleType, 0, 6 * i);
                 }
-                break;
-            case Sector .RightTrain:
-                Chunk.AddObstacle(ObstacleType.Coin, 1, 6);
 
+                break;
+            }
+            case Sector.RightTrain:
+            {
                 Chunk.AddObstacle(ObstacleType.Train, 0, 6 * 5);
                 Chunk.AddObstacle(ObstacleType.Train, 1, 6 * 8);
 
@@ -109,45 +106,41 @@ public class LevelGenerator : MonoBehaviour
                     int obstacleType = Random.Range(1, 3);
                     Chunk.AddObstacle((ObstacleType)obstacleType, 2, 6 * i);
                 }
+
                 break;
+            }
             case Sector.LeftMiddleTrains:
+            {
+                int sector = Random.Range(2, 8) * 6;
+                Chunk.AddObstacle(ObstacleType.Train, 0, sector);
+                Chunk.AddObstacle(ObstacleType.Train, 1, sector);
+
+                for (int i = 0; i < 16; i++)
                 {
-                    Chunk.AddObstacle(ObstacleType.Coin, 2, 6);
+                    bool shouldSpawn = Random.Range(0, 3) == 0;
+                    if (!shouldSpawn) continue;
 
-                    int sector = Random.Range(2, 8) * 6;
-                    Chunk.AddObstacle(ObstacleType.Train, 0, sector);
-                    Chunk.AddObstacle(ObstacleType.Train, 1, sector);
-
-                    for (int i = 0; i < 16; i++)
-                    {
-                        bool shouldSpawn = Random.Range(0, 3) == 0;
-                        if (!shouldSpawn) continue;
-
-                        int obstacleType = Random.Range(1, 3);
-                        Chunk.AddObstacle((ObstacleType)obstacleType, 2, 6 * i);
-                    }
-                    break;
+                    int obstacleType = Random.Range(1, 3);
+                    Chunk.AddObstacle((ObstacleType)obstacleType, 2, 6 * i);
                 }
+                break;
+            }
             case Sector.RightMiddleTrains:
+            {
+                int sector = Random.Range(2, 8) * 6;
+                Chunk.AddObstacle(ObstacleType.Train, 1, sector);
+                Chunk.AddObstacle(ObstacleType.Train, 2, sector);
+
+                for (int i = 0; i < 16; i++)
                 {
-                    Chunk.AddObstacle(ObstacleType.Coin, 0, 6);
+                    bool shouldSpawn = Random.Range(0, 3) == 0;
+                    if (!shouldSpawn) continue;
 
-                    int sector = Random.Range(2, 8) * 6;
-                    Chunk.AddObstacle(ObstacleType.Train, 1, sector);
-                    Chunk.AddObstacle(ObstacleType.Train, 2, sector);
-
-                    for (int i = 0; i < 16; i++)
-                    {
-                        bool shouldSpawn = Random.Range(0, 3) == 0;
-                        if (!shouldSpawn) continue;
-
-                        int obstacleType = Random.Range(1, 3);
-                        Chunk.AddObstacle((ObstacleType)obstacleType, 0, 6 * i);
-                    }
-                    break;
+                    int obstacleType = Random.Range(1, 3);
+                    Chunk.AddObstacle((ObstacleType)obstacleType, 0, 6 * i);
                 }
-
+                break;
+            }
         }
-
     }
 }
