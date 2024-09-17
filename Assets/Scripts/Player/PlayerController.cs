@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -80,6 +81,12 @@ public class PlayerController : MonoBehaviour
     private PlayerInput input;
     private CapsuleCollider col;
     
+    [Header("Effects")]
+    [SerializeField, Tooltip("The effect for when the player jumps")] GameObject jumpEffectPrefab;
+    
+    VisualEffect jumpEffect;
+
+    
     private void OnValidate()
     {
         // Add
@@ -112,6 +119,9 @@ public class PlayerController : MonoBehaviour
         col = GetComponent<CapsuleCollider>();
         // the player should have full health at the start
         currentHealth = maxtHealth;
+        
+        jumpEffect = Instantiate(jumpEffectPrefab, transform).GetComponent<VisualEffect>();
+        jumpEffect.resetSeedOnPlay = true;
     }
 
     
@@ -196,6 +206,15 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator Jump()
     {
+        if (jumpEffect)
+        {
+            jumpEffect.SetVector3("WorldPos", transform.position);
+            jumpEffect.Play();
+        }
+        else 
+            Debug.Log("No jump effect assigned on player controller");
+        
+        // exits if alerady jumping
         if (hasJumped)
         {
             yield break;
@@ -204,10 +223,10 @@ public class PlayerController : MonoBehaviour
         animation.PlayAction(AnimationInputs.ActionType.Jump);
         animation.UpdateGrounded(false);
 
+        // set controlling values
         hasJumped = true;
         fastFall = false;
         rb.useGravity = false;
-        
         
         MeshRenderer Mesh = GetComponent<MeshRenderer>();
         float targetJumpLocation = transform.position.y + (jumpHeight * Mesh.bounds.size.y);
@@ -298,7 +317,7 @@ public class PlayerController : MonoBehaviour
         fastFall = false;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         hasJumped = false;
         pauseInput = false;
