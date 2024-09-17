@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class DistanceScore : MonoBehaviour
 {
+    public static DistanceScore instance;
+    
     [SerializeField] private Transform player;
     [SerializeField] private TextMeshProUGUI distText;
 
-    private int dist;
+    public int dist;
 
     private void Start()
     {
+        instance = this;
         transform.position = player.transform.position;
     }
 

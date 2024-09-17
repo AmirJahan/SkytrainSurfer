@@ -8,10 +8,8 @@ public class Leaderboard : MonoBehaviour
 {
     public static Leaderboard instance;
     
-    [SerializeField] private LeaderboardPlayerItem itemPrefab;
+    [SerializeField] private PlayerListItem itemPrefab;
     [SerializeField] private RectTransform container;
-
-    private Coin coin;
     
     private string leaderboardID = "dist-board";
 
@@ -22,7 +20,7 @@ public class Leaderboard : MonoBehaviour
 
     private void Start()
     {
-        AddScore(coin.coins, leaderboardID);
+       AddScore(DistanceScore.instance.dist, leaderboardID);
     }
 
     public async void AddScore(float score, string leaderboardId)
@@ -41,13 +39,13 @@ public class Leaderboard : MonoBehaviour
 
             for (int i = 0; i < scoreResponse.Results.Count; i++)
             {
-                LeaderboardPlayerItem item = Instantiate(itemPrefab, container);
+                PlayerListItem item = Instantiate(itemPrefab, container);
                 item.Init(scoreResponse.Results[i]);
                 if (scoreResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
                 {
                     item.rank.color = Color.yellow;
                     item.name.color = Color.yellow;
-                    item.score.color = Color.yellow;
+                    item.dist.color = Color.yellow;
                 }
             }
         }
