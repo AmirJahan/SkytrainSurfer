@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     static PlayerController Instance;
+
+    [SerializeField] private AnimationInputs animation;
     
     public static PlayerController GetInstance()
     {
@@ -158,6 +160,8 @@ public class PlayerController : MonoBehaviour
         if ((lane == -1 && direction == -1) || (lane == 1 && direction == 1) || pauseInput)
             yield break;
         
+        animation.PlayAction(AnimationInputs.ActionType.SideJump);
+        
         pauseInput = true;
         lane += direction;
         
@@ -196,6 +200,9 @@ public class PlayerController : MonoBehaviour
         {
             yield break;
         }
+        
+        animation.PlayAction(AnimationInputs.ActionType.Jump);
+        animation.UpdateGrounded(false);
 
         hasJumped = true;
         fastFall = false;
@@ -240,6 +247,8 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator Slide()
     {
+        animation.PlayAction(AnimationInputs.ActionType.Roll);
+        
         rb.AddForce(Vector3.down * fastFallMultiplier);
         fastFall = true;
         
@@ -261,11 +270,11 @@ public class PlayerController : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, dest, slideTransitionTime * Time.deltaTime);
         }
 
-        col.height /= 4;
+        //col.height /= 4;
         
         yield return new WaitForSeconds(slideDuration);
         
-        col.height *= 4;
+        //col.height *= 4;
         
         dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
         startedLayer = lane;
@@ -295,12 +304,13 @@ public class PlayerController : MonoBehaviour
         pauseInput = false;
         fastFall = false;
         
+        animation.UpdateGrounded(true);
+        
         if (other.gameObject.CompareTag("Obstacle"))
         {
             // destrpy tje obstacle
             Destroy(gameObject);
         }
-        
     }
 
 
