@@ -298,16 +298,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             // destrpy tje obstacle
-            Destroy(other.gameObject);
-            
-            // reduce the player's health
-            currentHealth -= obstacleDamage;
-            
-            // check if the player is dead
-            if (currentHealth <= 0)
-            {
-                isAlive = false;
-            }
+            Destroy(gameObject);
         }
         
     }
