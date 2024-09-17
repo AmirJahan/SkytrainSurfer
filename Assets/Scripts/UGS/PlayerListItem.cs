@@ -17,5 +17,6 @@ public class PlayerListItem : MonoBehaviour
         this.player = entry;
         rank.text = (entry.Rank +1).ToString();
         name.text = entry.PlayerName;
+        dist.text = entry.Score.ToString();
     }
 }

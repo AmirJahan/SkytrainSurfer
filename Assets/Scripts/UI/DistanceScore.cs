@@ -7,6 +7,7 @@ public class DistanceScore : MonoBehaviour
     
     [SerializeField] private Transform player;
     [SerializeField] private TextMeshProUGUI distText;
+    [SerializeField] private GameObject LeaderboardCanvas;
 
     public int dist;
 
@@ -19,6 +20,10 @@ public class DistanceScore : MonoBehaviour
     private void Update()
     {
         UpdateScoreText();
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LeaderboardCanvas.SetActive(true);
+        }
     }
 
     private void UpdateScoreText()
