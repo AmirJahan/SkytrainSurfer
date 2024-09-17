@@ -255,6 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8419318245480225988}
   distText: {fileID: 545944538263406339}
+  LeaderboardCanvas: {fileID: 0}
+  dist: 0
 --- !u!1 &4759881636129390578
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,9 +970,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8284899271088390640}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3553316164491418326}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 345976133031473719, guid: 375afe1f519314727806ca7359c7edf3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3448638906074180463, guid: 375afe1f519314727806ca7359c7edf3,
         type: 3}
       propertyPath: m_Name

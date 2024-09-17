@@ -23,7 +23,7 @@ public class Leaderboard : MonoBehaviour
        AddScore(DistanceScore.instance.dist, leaderboardID);
     }
 
-    public async void AddScore(float score, string leaderboardId)
+    public async void AddScore(int score, string leaderboardId)
     {
         var playerEntry = await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardId, score);
         Debug.Log(JsonConvert.SerializeObject(playerEntry));
