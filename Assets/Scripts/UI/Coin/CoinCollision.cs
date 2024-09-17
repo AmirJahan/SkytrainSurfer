@@ -9,6 +9,7 @@ public class CoinCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnCoinPicked?.Invoke();
+            AudioManager.Instance.PlaySFX("CoinPickUp");
             Destroy(gameObject);
         }
     }
