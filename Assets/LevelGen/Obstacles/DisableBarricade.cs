@@ -16,6 +16,7 @@ public class DisableBarricade : MonoBehaviour
 
     private void Update()
     {
-        _barricadeCollider.enabled = !player.GetComponent<PlayerController>().isSliding;
+        if (player)
+            _barricadeCollider.enabled = !player.GetComponent<PlayerController>().isSliding;
     }
 }

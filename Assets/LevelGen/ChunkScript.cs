@@ -43,7 +43,7 @@ public class ChunkScript : MonoBehaviour
         switch (obstacle)
         {
             case ObstacleType.Train:
-                heightOffset = 0.5f;
+                heightOffset = 0.2f;
                 break;
             case ObstacleType.JumpBarricade:
                 heightOffset = 1f;
