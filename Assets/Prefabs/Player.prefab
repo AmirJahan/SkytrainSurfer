@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2553683698904880315}
   - component: {fileID: 2470921134335164878}
   - component: {fileID: 3270212479696958011}
+  - component: {fileID: 5311233785205432209}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,11 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62abc43164167ce48a568e4afbbfb9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animation: {fileID: 0}
   hopIncrement: 5
   hopSpeed: 2
   jumpHeight: 2
-  jumpSpeed: 2
-  jumpHangTime: 0.5
+  jumpSpeed: 0.2
+  jumpHangTime: 0.1
   hasJumped: 0
   currentHealth: 100
   maxtHealth: 100
@@ -139,6 +141,7 @@ MonoBehaviour:
   lane: 0
   pauseInput: 0
   isAlive: 1
+  jumpEffectPrefab: {fileID: 0}
 --- !u!54 &2470921134335164878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,3 +182,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSwipeDistance: 10
+  animation: {fileID: 0}
+--- !u!65 &5311233785205432209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165844198091301238}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.3266575, z: 1}
+  m_Center: {x: 0, y: 0.33667123, z: 0}
