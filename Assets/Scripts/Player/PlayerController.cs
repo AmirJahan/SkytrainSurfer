@@ -8,6 +8,8 @@ using UnityEngine.VFX;
 public class PlayerController : MonoBehaviour
 {
     static PlayerController Instance;
+    public GameObject PowerupPrefab;
+
 
     [SerializeField] private AnimationInputs animation;
     

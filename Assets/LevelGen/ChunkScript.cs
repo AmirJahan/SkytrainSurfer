@@ -8,7 +8,8 @@ public enum ObstacleType
     Train = 0,
     JumpBarricade = 1,
     RollBarricade = 2,
-    Coin = 3
+    Coin = 3,
+    MagPickUp =4
 }
 
 public class ChunkScript : MonoBehaviour
@@ -49,6 +50,9 @@ public class ChunkScript : MonoBehaviour
                 heightOffset = 1f;
                 break;
             case ObstacleType.RollBarricade:
+                heightOffset = 0.5f;
+                break;
+            case ObstacleType.MagPickUp:
                 heightOffset = 0.5f;
                 break;
 
