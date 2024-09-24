@@ -196,8 +196,8 @@ public class PlayerController : MonoBehaviour
         
         pauseInput = true;
         lane += direction;
-
-        AudioManager.Instance.PlaySFX("Slide");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Slide");
 
         // The target hop position
         float targetX = transform.position.z + (hopIncrement * direction);
@@ -252,7 +252,8 @@ public class PlayerController : MonoBehaviour
         fastFall = false;
         rb.useGravity = false;
 
-        AudioManager.Instance.PlaySFX("Jump");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Jump");
 
 
         
@@ -296,7 +297,8 @@ public class PlayerController : MonoBehaviour
     {
         animation.PlayAction(AnimationInputs.ActionType.Roll);
         
-        AudioManager.Instance.PlaySFX("Slide");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Slide");
         rb.AddForce(Vector3.down * fastFallMultiplier);
         fastFall = true;
 

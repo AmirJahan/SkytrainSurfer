@@ -46,10 +46,10 @@ public class ChunkScript : MonoBehaviour
                 heightOffset = 0.5f;
                 break;
             case ObstacleType.JumpBarricade:
-                heightOffset = 1.5f;
+                heightOffset = 1f;
                 break;
             case ObstacleType.RollBarricade:
-                heightOffset = 1.5f;
+                heightOffset = 0.5f;
                 break;
 
         }
