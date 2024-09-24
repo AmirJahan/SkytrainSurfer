@@ -7,6 +7,8 @@ public enum Sector
     RightTrain,
     LeftMiddleTrains,
     RightMiddleTrains,
+    LeftBuilding,
+    RightBuilding,
 }
 
 public class LevelGenerator : MonoBehaviour
@@ -23,6 +25,9 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField]
     GameObject PlayerObject;
+
+    [SerializeField]
+    GameObject BuildingsPrefab;
 
     [SerializeField]
     public float WorldSpeed = 10.0f;
@@ -141,6 +146,29 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
+
+            
+            case Sector.LeftBuilding:
+                {
+                    int sector = Random.Range(4, 11) * 11;
+                    Chunk.AddBuilding(BuildingType.GreenBuillding, 1, sector);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        bool shouldspawn = Random.Range(0, 7) == 0;
+                        if (!shouldspawn) continue;
+
+                        
+                    }
+                    break;
+                }
+            case Sector.RightBuilding:
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+
+                    }
+                    break;
+                }
         }
     }
 }
