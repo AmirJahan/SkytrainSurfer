@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
 
     private Vector2 moveDir = Vector2.zero;
 
+    [SerializeField] private AnimationInputs animation;
     
     public Vector2 MoveDir {
         get
@@ -46,20 +47,10 @@ public class PlayerInput : MonoBehaviour
         moveDir = moveDir.normalized;
     
         Debug.Log(moveDir);
-
-
     }
 
     void ProcessSwipeDelta(InputAction.CallbackContext context)
     {
         swipeDir = context.ReadValue<Vector2>();
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
