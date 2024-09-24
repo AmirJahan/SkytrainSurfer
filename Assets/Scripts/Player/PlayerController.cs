@@ -158,19 +158,19 @@ public class PlayerController : MonoBehaviour
                 Vector2 moveDir = input.MoveDir;
 
                 int xIn = Mathf.RoundToInt(moveDir.x);
+                int yIn = Mathf.RoundToInt(moveDir.y);
                 if (xIn != 0)
                 {
                     StartCoroutine(HopToSide(xIn));
                 }
 
-                int yIn = Mathf.RoundToInt(moveDir.y);
 
-                if (yIn > 0)
+                else if (yIn > 0)
                 {
                     StartCoroutine(Jump());
                 }
 
-                if (yIn < 0)
+                else if (yIn < 0)
                 {
                     StartCoroutine(Slide());
 
@@ -197,7 +197,8 @@ public class PlayerController : MonoBehaviour
         pauseInput = true;
         lane += direction;
 
-        AudioManager.Instance.PlaySFX("Slide");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Slide");
 
         // The target hop position
         float targetX = transform.position.z + (hopIncrement * direction);
@@ -252,7 +253,8 @@ public class PlayerController : MonoBehaviour
         fastFall = false;
         rb.useGravity = false;
 
-        AudioManager.Instance.PlaySFX("Jump");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Jump");
 
 
         
@@ -296,7 +298,8 @@ public class PlayerController : MonoBehaviour
     {
         animation.PlayAction(AnimationInputs.ActionType.Roll);
         
-        AudioManager.Instance.PlaySFX("Slide");
+        if (AudioManager.Instance)
+            AudioManager.Instance.PlaySFX("Slide");
         rb.AddForce(Vector3.down * fastFallMultiplier);
         fastFall = true;
 

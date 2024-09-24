@@ -126,10 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animation: {fileID: 0}
-  hopIncrement: 5
-  hopSpeed: 2
-  jumpHeight: 2
-  jumpSpeed: 0.2
+  hopIncrement: 2
+  hopSpeed: 0.5
+  jumpHeight: 1
+  jumpSpeed: 0.25
   jumpHangTime: 0.1
   hasJumped: 0
   currentHealth: 100
@@ -141,7 +141,10 @@ MonoBehaviour:
   lane: 0
   pauseInput: 0
   isAlive: 1
-  jumpEffectPrefab: {fileID: 0}
+  jumpEffectPrefab: {fileID: 1862474807608348547, guid: 1a8f20389a6c4314d9ace5f1bb156405,
+    type: 3}
+  moveEffectPrefab: {fileID: 1818470297387608650, guid: 2e0e22139be1be642a0d1bb5cb88ae64,
+    type: 3}
 --- !u!54 &2470921134335164878
 Rigidbody:
   m_ObjectHideFlags: 0
