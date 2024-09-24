@@ -567,6 +567,11 @@ PrefabInstance:
       propertyPath: hopIncrement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2553683698904880315, guid: 084d2d58f941b8f4588e2087a4e5aa57,
+        type: 3}
+      propertyPath: slideDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3270212479696958011, guid: 084d2d58f941b8f4588e2087a4e5aa57,
         type: 3}
       propertyPath: animation

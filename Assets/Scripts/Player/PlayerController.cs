@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("How fast the character falls when sliding in air")]
     float fastFallMultiplier = 150f;
 
+    public bool isSliding = false;
+
 
     [Header("Controller Values")]
     [SerializeField, Tooltip("The lane the player is currently in")]
@@ -321,9 +323,9 @@ public class PlayerController : MonoBehaviour
         }
 
         //col.height /= 4;
-        
+        isSliding = true;
         yield return new WaitForSeconds(slideDuration);
-        
+        isSliding = false;
         //col.height *= 4;
         
         dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
