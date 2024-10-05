@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f226c6469ea044642854c50823f82d5c, type: 3}
   m_Name: DlibFaceLandmarkDetectorProjectSettings
   m_EditorClassIdentifier: 
-  showSetupToolsWindowFlag: 1
+  showSetupToolsWindowFlag: 0

@@ -1,10 +1,14 @@
 using UnityEngine;
+using System.Collections; // Added for non-generic IEnumerator
 using System.Collections.Generic;
 using DlibFaceLandmarkDetector;
 using Unity.Barracuda; // For ONNX model inference
 using System.IO;
 using System.Linq;
 using UnityEngine.UI; // Added for RawImage
+#if UNITY_IOS
+using UnityEngine.Networking; // Required for iOS file access
+#endif
 
 public class EyeGazeGridController : MonoBehaviour
 {
@@ -61,6 +65,9 @@ public class EyeGazeGridController : MonoBehaviour
 
     private Texture2D displayTexture; // Texture assigned to RawImage to persist across frames
 
+    // Coroutine handle to manage gaze processing
+    private Coroutine gazeProcessingCoroutine;
+
     void Start()
     {
         // Initialize grid and region colors
@@ -102,6 +109,10 @@ public class EyeGazeGridController : MonoBehaviour
 
         if (displayTexture != null)
             Destroy(displayTexture);
+
+        // Stop the gaze processing coroutine if it's running
+        if (gazeProcessingCoroutine != null)
+            StopCoroutine(gazeProcessingCoroutine);
     }
 
     #region Grid Initialization
@@ -197,6 +208,59 @@ public class EyeGazeGridController : MonoBehaviour
 
     void InitializeLandmarkDetector()
     {
+#if UNITY_IOS
+        // On iOS, StreamingAssets are packed inside the app bundle and require UnityWebRequest to access
+        gazeProcessingCoroutine = StartCoroutine(LoadShapePredictorIOS());
+#else
+        // For other platforms, load directly from StreamingAssets
+        LoadShapePredictor();
+#endif
+    }
+
+#if UNITY_IOS
+    /// <summary>
+    /// Coroutine to load the shape predictor on iOS using UnityWebRequest.
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator LoadShapePredictorIOS()
+    {
+        // Construct the relative path to the shape predictor
+        string relativePath = "DlibFaceLandmarkDetector/sp_human_face_68.dat";
+        string fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
+
+        // Use UnityWebRequest to read the binary data
+        UnityWebRequest www = UnityWebRequest.Get(fullPath);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("Failed to load shape predictor on iOS: " + www.error);
+            yield break;
+        }
+
+        // Save the downloaded data to a temporary file
+        string tempPath = Path.Combine(Application.temporaryCachePath, "sp_human_face_68.dat");
+        File.WriteAllBytes(tempPath, www.downloadHandler.data);
+        shapePredictorPath = tempPath;
+
+        // Initialize the landmark detector
+        try
+        {
+            landmarkDetector = new FaceLandmarkDetector(shapePredictorPath);
+            Debug.Log("Shape predictor loaded successfully on iOS.");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Failed to load shape predictor on iOS: " + ex.Message);
+        }
+    }
+#endif
+
+    /// <summary>
+    /// Loads the shape predictor for non-iOS platforms.
+    /// </summary>
+    void LoadShapePredictor()
+    {
         // Construct the full path to the shape predictor
         shapePredictorPath = Path.Combine(Application.streamingAssetsPath, "DlibFaceLandmarkDetector", "sp_human_face_68.dat");
 
@@ -238,13 +302,29 @@ public class EyeGazeGridController : MonoBehaviour
         Debug.Log("Initializing webcam: " + deviceName);
 
         webCamTexture = new WebCamTexture(deviceName);
+
+        // Adjust camera parameters based on platform
+#if UNITY_IOS
+        // On iOS, you might want to use lower resolution to optimize performance
+        webCamTexture.requestedWidth = 640;
+        webCamTexture.requestedHeight = 480;
+#else
+        // For other platforms, you can use higher resolution if needed
+        webCamTexture.requestedWidth = 1280;
+        webCamTexture.requestedHeight = 720;
+#endif
+
         webCamTexture.Play();
 
         // Start coroutine to wait for webcam initialization
         StartCoroutine(WaitForWebCamInitialization());
     }
 
-    System.Collections.IEnumerator WaitForWebCamInitialization()
+    /// <summary>
+    /// Coroutine that waits for the webcam to initialize and then starts gaze processing.
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator WaitForWebCamInitialization()
     {
         // Wait until the webcam is ready
         while (webCamTexture.width <= 16)
@@ -254,6 +334,9 @@ public class EyeGazeGridController : MonoBehaviour
 
         Debug.Log("Webcam initialized. Resolution: " + webCamTexture.width + "x" + webCamTexture.height);
         isInitialized = true;
+
+        // Start the gaze processing coroutine
+        gazeProcessingCoroutine = StartCoroutine(ProcessGazeCoroutine());
     }
 
     #endregion
@@ -277,21 +360,38 @@ public class EyeGazeGridController : MonoBehaviour
 
     #region Update Loop
 
+    // Removed the gaze processing from Update()
     void Update()
     {
-        if (!isInitialized)
-            return;
+        // If there are other frame-based updates, they can be handled here.
+    }
 
-        // Capture the current frame from the webcam
-        Texture2D currentFrame = new Texture2D(webCamTexture.width, webCamTexture.height, TextureFormat.RGB24, false);
-        currentFrame.SetPixels(webCamTexture.GetPixels());
-        currentFrame.Apply();
+    #endregion
 
-        // Detect and process landmarks
-        DetectAndProcessGaze(currentFrame);
+    #region Gaze Processing Coroutine
 
-        // Clean up
-        Destroy(currentFrame);
+    /// <summary>
+    /// Coroutine that processes gaze direction every 0.1 seconds.
+    /// </summary>
+    /// <returns></returns>
+    System.Collections.IEnumerator ProcessGazeCoroutine()
+    {
+        while (isInitialized)
+        {
+            // Capture the current frame from the webcam
+            Texture2D currentFrame = new Texture2D(webCamTexture.width, webCamTexture.height, TextureFormat.RGB24, false);
+            currentFrame.SetPixels(webCamTexture.GetPixels());
+            currentFrame.Apply();
+
+            // Detect and process landmarks
+            DetectAndProcessGaze(currentFrame);
+
+            // Clean up
+            Destroy(currentFrame);
+
+            // Wait for 0.1 seconds before the next processing
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     #endregion
@@ -300,6 +400,12 @@ public class EyeGazeGridController : MonoBehaviour
 
     void DetectAndProcessGaze(Texture2D image)
     {
+        if (landmarkDetector == null)
+        {
+            Debug.LogError("Landmark detector is not initialized.");
+            return;
+        }
+
         // Detect facial bounding boxes
         landmarkDetector.SetImage(image);
         List<Rect> faceRects = landmarkDetector.Detect(); // Detect faces
