@@ -8,8 +8,6 @@ public enum Sector
     RightTrain,
     LeftMiddleTrains,
     RightMiddleTrains,
-    LeftBuilding,
-    RightBuilding,
 }
 
 public class LevelGenerator : MonoBehaviour
@@ -28,9 +26,6 @@ public class LevelGenerator : MonoBehaviour
     GameObject PlayerObject;
 
     [SerializeField]
-    GameObject BuildingsPrefab;
-
-    [SerializeField]
     public float WorldSpeed = 10.0f;
 
     [SerializeField] public const float MagnetSpawnTime = 30f;
@@ -41,7 +36,10 @@ public class LevelGenerator : MonoBehaviour
     int IncreaseSpeedXSeconds = 5;
     
     [SerializeField]
-    float IncreaseSpeedBy = 1.5f;
+    float MultiplySpeedBy = 1.5f;
+    
+    [SerializeField]
+    float MaxSpeed = 100.0f;
     
  
     private void Awake()
@@ -55,15 +53,15 @@ public class LevelGenerator : MonoBehaviour
         SpawnChunk(new Vector3(-45.0f, -1.5f, 0.0f));
         SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
         
-        SpeedController.Instance.Setup(IncreaseSpeedBy, IncreaseSpeedXSeconds);
-        SpeedController.Instance.CurrentSpeed = WorldSpeed;
+        SpeedController.Instance.Setup(WorldSpeed, MultiplySpeedBy, IncreaseSpeedXSeconds, MaxSpeed);
         SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
+        
+        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     public void UpdateWorldSpeed(float speed)
     {
         WorldSpeed = speed;
-        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     void SetSpawnMagnet()
@@ -172,29 +170,6 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
-
-            
-            case Sector.LeftBuilding:
-                {
-                    int sector = Random.Range(4, 11) * 11;
-                    Chunk.AddBuilding(BuildingType.GreenBuillding, 1, sector);
-                    for (int i = 0; i < 3; i++)
-                    {
-                        bool shouldspawn = Random.Range(0, 7) == 0;
-                        if (!shouldspawn) continue;
-
-                        
-                    }
-                    break;
-                }
-            case Sector.RightBuilding:
-                {
-                    for (int i = 0; i < 3; i++)
-                    {
-
-                    }
-                    break;
-                }
         }
 
         if (SpawnMagnet)

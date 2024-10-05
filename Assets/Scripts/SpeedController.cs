@@ -12,7 +12,8 @@ public class SpeedController
     public float SpeedIncrease = 1.5f;
     public int SpeedIncreaseSeconds = 5;
     
-    public float CurrentSpeed = 1.0f;
+    private float CurrentSpeed = 1.0f;
+    private float MaxSpeed = 100.0f;
 
     private static SpeedController _instance;
     public static SpeedController Instance
@@ -30,10 +31,12 @@ public class SpeedController
     
     public static bool IsValid () {return Instance != null;}
     
-    public void Setup(float speed, int speedIncreaseInSeconds)
+    public void Setup(float startSpeed, float multiplySpeed, int speedIncreaseInSeconds, float newMaxSpeed)
     {
-        SpeedIncrease = speed;
+        SpeedIncrease = multiplySpeed;
         SpeedIncreaseSeconds = speedIncreaseInSeconds;
+        CurrentSpeed = startSpeed;
+        MaxSpeed = newMaxSpeed;
     }
     
     public float GetSpeed()
@@ -49,14 +52,17 @@ public class SpeedController
         _instance.OnSpeedChanged?.Invoke(_instance.CurrentSpeed);
 
         // Increase the speed so long as the game is playing
-        while (Application.isPlaying)
+        while (Application.isPlaying )
         {
             await Task.Delay(SpeedIncreaseSeconds * 1000);
             CurrentSpeed *= SpeedIncrease;
+            if (MaxSpeed < CurrentSpeed)
+                CurrentSpeed = MaxSpeed;
+            
             OnSpeedChanged?.Invoke(CurrentSpeed);
 
             // ensure the value isn't changing while the game is paused
-            while (Time.timeScale == 0)
+            while (Time.timeScale == 0 || MaxSpeed < CurrentSpeed)
             {
                 await Task.Delay(1000);
             }
