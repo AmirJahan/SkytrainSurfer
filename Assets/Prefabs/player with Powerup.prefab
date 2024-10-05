@@ -136,6 +136,18 @@ PrefabInstance:
       propertyPath: PowerupPrefab
       value: 
       objectReference: {fileID: 8168145342606841692}
+    - target: {fileID: 2553683698904880315, guid: 084d2d58f941b8f4588e2087a4e5aa57,
+        type: 3}
+      propertyPath: jumpEffectPrefab
+      value: 
+      objectReference: {fileID: 1862474807608348547, guid: 1a8f20389a6c4314d9ace5f1bb156405,
+        type: 3}
+    - target: {fileID: 2553683698904880315, guid: 084d2d58f941b8f4588e2087a4e5aa57,
+        type: 3}
+      propertyPath: moveEffectPrefab
+      value: 
+      objectReference: {fileID: 1818470297387608650, guid: 2e0e22139be1be642a0d1bb5cb88ae64,
+        type: 3}
     - target: {fileID: 8943149946886910028, guid: 084d2d58f941b8f4588e2087a4e5aa57,
         type: 3}
       propertyPath: m_LocalPosition.x
