@@ -8,6 +8,8 @@ using UnityEngine.VFX;
 public class PlayerController : MonoBehaviour
 {
     static PlayerController Instance;
+    public GameObject PowerupPrefab;
+
 
     [SerializeField] private AnimationInputs animation;
     
@@ -161,19 +163,19 @@ public class PlayerController : MonoBehaviour
                 Vector2 moveDir = input.MoveDir;
 
                 int xIn = Mathf.RoundToInt(moveDir.x);
+                int yIn = Mathf.RoundToInt(moveDir.y);
                 if (xIn != 0)
                 {
                     StartCoroutine(HopToSide(xIn));
                 }
 
-                int yIn = Mathf.RoundToInt(moveDir.y);
 
-                if (yIn > 0)
+                else if (yIn > 0)
                 {
                     StartCoroutine(Jump());
                 }
 
-                if (yIn < 0)
+                else if (yIn < 0)
                 {
                     StartCoroutine(Slide());
 
