@@ -4,6 +4,7 @@ using DlibFaceLandmarkDetector;
 using Unity.Barracuda; // For ONNX model inference
 using System.IO;
 using System.Linq;
+using UnityEngine.UI; // Added for RawImage
 
 public class EyeGazeGridController : MonoBehaviour
 {
@@ -46,6 +47,20 @@ public class EyeGazeGridController : MonoBehaviour
     private Model runtimeModel;
     private IWorker worker;
 
+    // -------------------------------
+    // ===== UI Settings =============
+    // -------------------------------
+
+    [Header("UI Settings")]
+    [Tooltip("RawImage UI element to display the extracted eye image.")]
+    public RawImage eyeDisplay; // Added for displaying the eye texture
+
+    // -------------------------------
+    // ===== Additional Fields ========
+    // -------------------------------
+
+    private Texture2D displayTexture; // Texture assigned to RawImage to persist across frames
+
     void Start()
     {
         // Initialize grid and region colors
@@ -60,6 +75,17 @@ public class EyeGazeGridController : MonoBehaviour
 
         // Load ONNX model
         InitializeONNXModel();
+
+        // Initialize displayTexture if eyeDisplay is assigned
+        if (eyeDisplay != null)
+        {
+            displayTexture = new Texture2D(224, 224, TextureFormat.RGB24, false);
+            eyeDisplay.texture = displayTexture;
+        }
+        else
+        {
+            Debug.LogWarning("RawImage for eye display is not assigned in the Inspector.");
+        }
     }
 
     void OnDestroy()
@@ -73,6 +99,9 @@ public class EyeGazeGridController : MonoBehaviour
 
         if (worker != null)
             worker.Dispose();
+
+        if (displayTexture != null)
+            Destroy(displayTexture);
     }
 
     #region Grid Initialization
@@ -277,46 +306,58 @@ public class EyeGazeGridController : MonoBehaviour
 
         if (faceRects != null && faceRects.Count > 0)
         {
-            foreach (Rect faceRect in faceRects)
+            // For this implementation, we'll process only the first detected face
+            Rect faceRect = faceRects[0];
+            Debug.Log($"Processing face at: {faceRect}");
+
+            // Detect facial landmarks for the detected face
+            List<Vector2> landmarks = landmarkDetector.DetectLandmark(faceRect); // Pass face bounding box
+
+            if (landmarks != null && landmarks.Count == 68) // Ensure all 68 landmarks are detected
             {
-                // Detect facial landmarks for the detected face
-                List<Vector2> landmarks = landmarkDetector.DetectLandmark(faceRect); // Pass face bounding box
-
-                if (landmarks != null && landmarks.Count == 68) // Ensure all 68 landmarks are detected
+                // Adjust landmarks for Unity's coordinate system
+                for (int i = 0; i < landmarks.Count; i++)
                 {
-                    // Adjust landmarks for Unity's coordinate system
-                    for (int i = 0; i < landmarks.Count; i++)
+                    landmarks[i] = FlipYCoordinate(landmarks[i], image.height);
+                }
+
+                // Extract the right eye image
+                Texture2D eyeTexture = ExtractRightEye(image, landmarks);
+
+                if (eyeTexture != null)
+                {
+                    // Display the eye image on the RawImage UI
+                    if (eyeDisplay != null)
                     {
-                        landmarks[i] = FlipYCoordinate(landmarks[i], image.height);
+                        // Copy the eyeTexture data to displayTexture to persist it
+                        DisplayTexture(eyeTexture);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("RawImage for eye display is not assigned.");
                     }
 
-                    // Extract the right eye image
-                    Texture2D eyeTexture = ExtractRightEye(image, landmarks);
+                    // Prepare the eye image for the model
+                    Tensor inputTensor = PrepareInputTensor(eyeTexture);
 
-                    if (eyeTexture != null)
+                    if (inputTensor != null)
                     {
-                        // Prepare the eye image for the model
-                        Tensor inputTensor = PrepareInputTensor(eyeTexture);
+                        // Predict gaze direction
+                        string predictedRegion = PredictGazeDirection(inputTensor);
 
-                        if (inputTensor != null)
-                        {
-                            // Predict gaze direction
-                            string predictedRegion = PredictGazeDirection(inputTensor);
+                        // Update the grid based on the prediction
+                        UpdateGridBasedOnPrediction(predictedRegion);
 
-                            // Update the grid based on the prediction
-                            UpdateGridBasedOnPrediction(predictedRegion);
-
-                            // Clean up
-                            inputTensor.Dispose();
-                        }
-
-                        Destroy(eyeTexture);
+                        // Clean up
+                        inputTensor.Dispose();
                     }
+
+                    Destroy(eyeTexture);
                 }
-                else
-                {
-                    Debug.LogError("No face landmarks detected or incorrect number of landmarks.");
-                }
+            }
+            else
+            {
+                Debug.LogError("No face landmarks detected or incorrect number of landmarks.");
             }
         }
         else
@@ -371,6 +412,9 @@ public class EyeGazeGridController : MonoBehaviour
         // Define the rectangle to crop
         Rect eyeRect = new Rect(minX, minY, maxX - minX, maxY - minY);
 
+        // Debugging: Log the cropping rectangle
+        Debug.Log($"Cropping eye region: {eyeRect}");
+
         // Crop the right eye region
         Texture2D croppedEye = CropTexture(image, eyeRect);
 
@@ -397,6 +441,12 @@ public class EyeGazeGridController : MonoBehaviour
     {
         try
         {
+            // Ensure the rectangle is within the source texture bounds
+            rect.x = Mathf.Clamp(rect.x, 0, source.width);
+            rect.y = Mathf.Clamp(rect.y, 0, source.height);
+            rect.width = Mathf.Clamp(rect.width, 1, source.width - rect.x);
+            rect.height = Mathf.Clamp(rect.height, 1, source.height - rect.y);
+
             Texture2D cropped = new Texture2D((int)rect.width, (int)rect.height, TextureFormat.RGB24, false);
             Color[] pixels = source.GetPixels((int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height);
             cropped.SetPixels(pixels);
@@ -554,6 +604,36 @@ public class EyeGazeGridController : MonoBehaviour
                 cubeRenderer.material.color = Color.white;
             }
         }
+    }
+
+    #endregion
+
+    #region Texture Display
+
+    /// <summary>
+    /// Copies the eyeTexture data to the displayTexture for persistence.
+    /// </summary>
+    /// <param name="eyeTexture">The processed eye texture.</param>
+    void DisplayTexture(Texture2D eyeTexture)
+    {
+        if (displayTexture == null)
+        {
+            Debug.LogError("Display texture is not initialized.");
+            return;
+        }
+
+        // Ensure the sizes match
+        if (displayTexture.width != eyeTexture.width || displayTexture.height != eyeTexture.height)
+        {
+            Debug.LogWarning("Display texture size does not match eye texture size. Resizing display texture.");
+            Destroy(displayTexture);
+            displayTexture = new Texture2D(eyeTexture.width, eyeTexture.height, TextureFormat.RGB24, false);
+            eyeDisplay.texture = displayTexture;
+        }
+
+        // Copy pixels from eyeTexture to displayTexture
+        displayTexture.SetPixels(eyeTexture.GetPixels());
+        displayTexture.Apply();
     }
 
     #endregion
