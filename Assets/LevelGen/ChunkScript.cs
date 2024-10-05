@@ -107,7 +107,7 @@ public class ChunkScript : MonoBehaviour
             Location.z += sideOffset;
         }
 
-        Location.y = 0.0f;
+        Location.y = -5.0f + Random.Range(-2.5f, 2.5f);
 
         GameObject buildingPrefab = Buildings[Random.Range(0, Buildings.Length)];
         GameObject building = Instantiate(buildingPrefab, Location, Quaternion.identity);

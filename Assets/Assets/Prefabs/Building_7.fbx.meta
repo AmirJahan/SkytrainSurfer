@@ -1,9 +1,21 @@
 fileFormatVersion: 2
 guid: 329c1c6c7107ba04fb978ccf4448654d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239474
+  packageName: Low Poly Simple Urban City 3D Asset Pack
+  packageVersion: 1.0.0
+  assetPath: Assets/Low Poly Simple Urban City 3D Asset Pack/Models/Buildings/Building_7.fbx
+  uploadId: 551219
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: e1cf4c33b23d399438817f257f5b84ba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,8 +28,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -40,6 +50,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -67,6 +78,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -99,15 +111,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239474
-  packageName: Low Poly Simple Urban City 3D Asset Pack
-  packageVersion: 1.0.0
-  assetPath: Assets/Low Poly Simple Urban City 3D Asset Pack/Models/Buildings/Building_7.fbx
-  uploadId: 551219

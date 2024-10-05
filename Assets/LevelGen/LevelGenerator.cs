@@ -8,6 +8,8 @@ public enum Sector
     RightTrain,
     LeftMiddleTrains,
     RightMiddleTrains,
+    LeftBuilding,
+    RightBuilding
 }
 
 public class LevelGenerator : MonoBehaviour
