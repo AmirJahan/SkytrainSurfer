@@ -9,7 +9,7 @@ public class RampScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.transform.position = new Vector3(other.transform.position.x, transform.position.y + transform.position.x - other.transform.position.x + 1.5f, other.transform.position.z);
+            other.transform.position = new Vector3(other.transform.position.x, transform.position.y + transform.position.x - other.transform.position.x + 2f, other.transform.position.z);
         }
     }
 }

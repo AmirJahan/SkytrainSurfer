@@ -59,6 +59,7 @@ MonoBehaviour:
   - {fileID: 8815448893347046259, guid: 9c6358f892d0cb240848a08d77caa521, type: 3}
   - {fileID: 6892106364734440251, guid: deaf2caa0ceef2048819ef60a168bee6, type: 3}
   - {fileID: 6517102398231804957, guid: 019f267a9098e4f43a3428c65a0b1fe2, type: 3}
+  Magnet: {fileID: 4056496662291449106, guid: c0e05dd8fd777114481860ccf87fe58e, type: 3}
 --- !u!1001 &969019925638099070
 PrefabInstance:
   m_ObjectHideFlags: 0

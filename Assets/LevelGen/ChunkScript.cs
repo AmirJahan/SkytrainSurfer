@@ -52,7 +52,7 @@ public class ChunkScript : MonoBehaviour
                 heightOffset = 0.5f;
                 break;
             case ObstacleType.Magnet:
-                heightOffset = 0f;
+                heightOffset = 1f;
                 break;
 
         }
@@ -66,6 +66,7 @@ public class ChunkScript : MonoBehaviour
         {
             Obstacle = Instantiate(Magnet, Location, Magnet.transform.rotation);
             Obstacle.transform.SetParent(transform, true);
+            Debug.Log("Spawned Magnet");
             return;
         }
         
