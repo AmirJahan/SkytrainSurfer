@@ -8,7 +8,7 @@ public enum ObstacleType
     Train = 0,
     JumpBarricade = 1,
     RollBarricade = 2,
-    Coin = 3
+    Magnet = 3
 }
 
 public class ChunkScript : MonoBehaviour
@@ -17,9 +17,10 @@ public class ChunkScript : MonoBehaviour
 
     [SerializeField] private GameObject[] ObstaclePrefabs;
 
-
     [SerializeField] private GameObject[] ObstaclePrefabsWithCoins;
 
+    [SerializeField] private GameObject Magnet;
+    
     private void Update()
     {
         Vector3 newPosition = transform.position;
@@ -35,7 +36,6 @@ public class ChunkScript : MonoBehaviour
 
     public void AddObstacle(ObstacleType obstacle, int lane, int forwardOffset)
     {
-
         Vector3 Location = transform.position;
 
         float heightOffset = 0.0f;
@@ -51,6 +51,9 @@ public class ChunkScript : MonoBehaviour
             case ObstacleType.RollBarricade:
                 heightOffset = 0.5f;
                 break;
+            case ObstacleType.Magnet:
+                heightOffset = 0f;
+                break;
 
         }
 
@@ -59,9 +62,15 @@ public class ChunkScript : MonoBehaviour
         Location.z += -2 + lane * 2;
 
         GameObject Obstacle;
+        if (obstacle == ObstacleType.Magnet)
+        {
+            Obstacle = Instantiate(Magnet, Location, Magnet.transform.rotation);
+            Obstacle.transform.SetParent(transform, true);
+            return;
+        }
+        
         if (Random.value < 0.5f)
         {
-           // Obstacle = Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, Quaternion.identity);
             Obstacle =  Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
         }
         else

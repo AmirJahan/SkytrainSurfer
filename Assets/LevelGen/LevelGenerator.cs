@@ -26,6 +26,10 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField]
     public float WorldSpeed = 10.0f;
+
+    public const float MagnetSpawnTime = 5f;
+
+    private bool SpawnMagnet = false;
     
     private void Awake()
     {
@@ -37,8 +41,13 @@ public class LevelGenerator : MonoBehaviour
     {
         SpawnChunk(new Vector3(-45.0f, -1.5f, 0.0f));
         SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
+        InvokeRepeating(nameof(SetSpawnMagnet), MagnetSpawnTime, MagnetSpawnTime);
     }
 
+    void SetSpawnMagnet()
+    {
+        SpawnMagnet = true;
+    }
 
     public GameObject SpawnChunk(Vector3 RelativePosition)
     {
@@ -141,6 +150,11 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
+        }
+
+        if (SpawnMagnet)
+        {
+            Chunk.AddObstacle(ObstacleType.Magnet, 1, 0);
         }
     }
 }
