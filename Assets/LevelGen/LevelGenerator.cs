@@ -55,12 +55,13 @@ public class LevelGenerator : MonoBehaviour
         
         SpeedController.Instance.Setup(WorldSpeed, MultiplySpeedBy, IncreaseSpeedXSeconds, MaxSpeed);
         SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
+        
+        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     public void UpdateWorldSpeed(float speed)
     {
         WorldSpeed = speed;
-        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     void SetSpawnMagnet()
