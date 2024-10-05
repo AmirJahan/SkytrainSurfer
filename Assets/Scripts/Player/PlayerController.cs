@@ -8,6 +8,8 @@ using UnityEngine.VFX;
 public class PlayerController : MonoBehaviour
 {
     static PlayerController Instance;
+    public GameObject PowerupPrefab;
+
 
     [SerializeField] private AnimationInputs animation;
     
@@ -66,6 +68,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("How fast the character falls when sliding in air")]
     float fastFallMultiplier = 150f;
 
+    public bool isSliding = false;
+
 
     [Header("Controller Values")]
     [SerializeField, Tooltip("The lane the player is currently in")]
@@ -119,6 +123,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HenrysAudioManager.mInstance.PlayBackgroundMusic(gameObject,gameObject.transform);
         col = GetComponent<CapsuleCollider>();
         // the player should have full health at the start
         currentHealth = maxtHealth;
@@ -188,6 +193,8 @@ public class PlayerController : MonoBehaviour
     // NOTE it is restricted from moving forwards or backwards. Change it if it is needed above
     IEnumerator HopToSide(int direction)
     {
+        HenrysAudioManager.mInstance.PlaySlideSound(gameObject, gameObject.transform);
+        //AudioManager.Instance.PlaySFX("Jump");
         // Don't allow the player to hop if they are at the edge of the screen
         if ((lane == -1 && direction == -1) || (lane == 1 && direction == 1) || pauseInput)
             yield break;
@@ -196,9 +203,8 @@ public class PlayerController : MonoBehaviour
         
         pauseInput = true;
         lane += direction;
-
-        if (AudioManager.Instance)
-            AudioManager.Instance.PlaySFX("Slide");
+        //if (AudioManager.Instance)
+        //    AudioManager.Instance.PlaySFX("Slide");
 
         // The target hop position
         float targetX = transform.position.z + (hopIncrement * direction);
@@ -231,6 +237,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Jump()
     {
+
+        HenrysAudioManager.mInstance.PlayJumpSound(this.gameObject, gameObject.transform);
         if (jumpEffect)
         {
             jumpEffect.SetVector3("WorldPos", transform.position);
@@ -253,8 +261,8 @@ public class PlayerController : MonoBehaviour
         fastFall = false;
         rb.useGravity = false;
 
-        if (AudioManager.Instance)
-            AudioManager.Instance.PlaySFX("Jump");
+        //if (AudioManager.Instance)
+        //    AudioManager.Instance.PlaySFX("Jump");
 
 
         
@@ -296,10 +304,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Slide()
     {
+        HenrysAudioManager.mInstance.PlaySlideSound(gameObject, gameObject.transform);
+
         animation.PlayAction(AnimationInputs.ActionType.Roll);
         
-        if (AudioManager.Instance)
-            AudioManager.Instance.PlaySFX("Slide");
+       
         rb.AddForce(Vector3.down * fastFallMultiplier);
         fastFall = true;
 
@@ -322,9 +331,9 @@ public class PlayerController : MonoBehaviour
         }
 
         //col.height /= 4;
-        
+        isSliding = true;
         yield return new WaitForSeconds(slideDuration);
-        
+        isSliding = false;
         //col.height *= 4;
         
         dest = new Vector3(transform.position.x, transform.position.y + (col.height / 4), transform.position.z);
@@ -356,6 +365,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             // destrpy tje obstacle
+            HenrysAudioManager.mInstance.PlayTakeDamage2Sound(gameObject, gameObject.transform);
+            HenrysAudioManager.mInstance.PlayTakeDamageSound(gameObject, gameObject.transform);
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
         }

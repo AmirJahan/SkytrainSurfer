@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
 
     public void AddScore()
     {
+        HenrysAudioManager.mInstance.PlayCoinSound(gameObject, gameObject.transform);
         coins++;
     }
 

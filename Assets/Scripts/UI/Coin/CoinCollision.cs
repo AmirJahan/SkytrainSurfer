@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.VFX;
@@ -27,6 +28,7 @@ public class CoinCollision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            
             Coin.instance.AddScore();
             OnCoinPicked?.Invoke();
             
@@ -44,6 +46,26 @@ public class CoinCollision : MonoBehaviour
         }
     }
 
+    public void CoinPullToLocation(Vector3 Location , float duration)
+    {
+       StartCoroutine( TiltLerp(duration, Location));
+    }
+    IEnumerator TiltLerp(float lerpDuration, Vector3 endpos)
+    {
+        float timeElapsed = 0;
+        Vector3 startValue = transform.position;
+
+        while (timeElapsed < lerpDuration)
+        {
+            transform.position = Vector3.Lerp(startValue, endpos, timeElapsed / lerpDuration);
+             
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.position = endpos;
+    }
     IEnumerator DestroyAfterLoad()
     {
         yield return new WaitForSeconds(2f);

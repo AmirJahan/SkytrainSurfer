@@ -17,7 +17,7 @@ public class AudioManager : SingletonCreator<AudioManager>
 
     private void Start()
     {
-        PlayMusic("Theme");
+        PlayMusic("Background");
     }
 
     public void PlayMusic(string name)

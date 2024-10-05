@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2464436438909714693}
   - component: {fileID: 51247008359036440}
   - component: {fileID: 5224065223201725831}
+  - component: {fileID: 7200408344744087764}
   m_Layer: 0
   m_Name: RollBarricade
   m_TagString: Obstacle
@@ -107,3 +108,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.8835497, y: 0.23389912, z: 0.13519308}
   m_Center: {x: 1.1826862e-14, y: 0.95536053, z: 0.31236345}
+--- !u!114 &7200408344744087764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213386214944941476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ed18375e8c448419dd936bcf3b6beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
