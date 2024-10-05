@@ -45,7 +45,6 @@ public class ChunkScript : MonoBehaviour
 
     public void AddObstacle(ObstacleType obstacle, int lane, int forwardOffset)
     {
-
         Vector3 Location = transform.position;
 
         float heightOffset = 0.0f;
@@ -71,8 +70,8 @@ public class ChunkScript : MonoBehaviour
         GameObject Obstacle;
         if (Random.value < 0.5f)
         {
-           // Obstacle = Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, Quaternion.identity);
-            Obstacle =  Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
+            // Obstacle = Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, Quaternion.identity);
+            Obstacle = Instantiate(ObstaclePrefabsWithCoins[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
         }
         else
         {
@@ -81,14 +80,23 @@ public class ChunkScript : MonoBehaviour
         Obstacle.transform.SetParent(transform, true);
     }
 
-    public void AddBuilding(BuildingType buildings, int lane, int forwardOffset)
+    public void AddBuilding(BuildingType buildings, int lanes, int forwardOffset)
     {
         Vector3 Location = transform.position;
         Location.x += 50.0f - forwardOffset;
-        float sideOffset = 1.0f;
-        Location.x += (lane % 2 == 0 ? -sideOffset : sideOffset);
+
+        float sideOffset = 10.0f;
+
+        if (lanes == 0)
+        {
+            Location.z -= sideOffset;
+        }
+        else if (lanes == 2)
+        {
+            Location.z += sideOffset;
+        }
+
         Location.y = 0.0f;
-        Location.z += -2 + lane * 2;
 
         GameObject buildingPrefab = Buildings[Random.Range(0, Buildings.Length)];
         GameObject building = Instantiate(buildingPrefab, Location, Quaternion.identity);

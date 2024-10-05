@@ -146,29 +146,24 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
-
-            
             case Sector.LeftBuilding:
-                {
-                    int sector = Random.Range(4, 11) * 11;
-                    Chunk.AddBuilding(BuildingType.GreenBuillding, 1, sector);
-                    for (int i = 0; i < 3; i++)
-                    {
-                        bool shouldspawn = Random.Range(0, 7) == 0;
-                        if (!shouldspawn) continue;
+                Chunk.AddBuilding(BuildingType.GreenBuillding, 0, Random.Range(11, 4) * 11);
+                break;
 
-                        
-                    }
-                    break;
-                }
             case Sector.RightBuilding:
-                {
-                    for (int i = 0; i < 3; i++)
-                    {
+                Chunk.AddBuilding(BuildingType.GreenBuillding, 2, Random.Range(4, 11) * 11); 
+                break;
+        }
+        int numberOfBuildings = 10;
+        float distanceBetweenBuildings = 10.0f;
 
-                    }
-                    break;
-                }
+        for (int i = 0; i < numberOfBuildings; i++)
+        {
+            float forwardOffset = i * distanceBetweenBuildings;
+
+            Chunk.AddBuilding(BuildingType.GreenBuillding, 0, (int)forwardOffset); 
+
+            Chunk.AddBuilding(BuildingType.GreenBuillding, 2, (int)forwardOffset);
         }
     }
 }
