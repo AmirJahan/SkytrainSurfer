@@ -53,7 +53,7 @@ public class CoinCollision : MonoBehaviour
     
     IEnumerator CleanUp()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.25f);
         Destroy(coinCollectionEffect.gameObject);
     }
 
