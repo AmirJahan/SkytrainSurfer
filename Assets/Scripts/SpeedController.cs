@@ -35,6 +35,7 @@ public class SpeedController
     {
         SpeedIncrease = multiplySpeed;
         SpeedIncreaseSeconds = speedIncreaseInSeconds;
+        CurrentSpeed = startSpeed;
         MaxSpeed = newMaxSpeed;
     }
     
@@ -51,7 +52,7 @@ public class SpeedController
         _instance.OnSpeedChanged?.Invoke(_instance.CurrentSpeed);
 
         // Increase the speed so long as the game is playing
-        while (Application.isPlaying && CurrentSpeed < MaxSpeed)
+        while (Application.isPlaying )
         {
             await Task.Delay(SpeedIncreaseSeconds * 1000);
             CurrentSpeed *= SpeedIncrease;
@@ -61,7 +62,7 @@ public class SpeedController
             OnSpeedChanged?.Invoke(CurrentSpeed);
 
             // ensure the value isn't changing while the game is paused
-            while (Time.timeScale == 0)
+            while (Time.timeScale == 0 || CurrentSpeed < MaxSpeed)
             {
                 await Task.Delay(1000);
             }
