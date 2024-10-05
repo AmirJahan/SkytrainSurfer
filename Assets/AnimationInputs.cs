@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AnimationInputs : MonoBehaviour
@@ -12,7 +13,28 @@ public class AnimationInputs : MonoBehaviour
         Roll,
         Victory
     }
+
+    [SerializeField, Tooltip("How much of a distance there is between world speed and animation speed")]
+    private float SpeedDampner = 10f;
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+        
+        if (animator)   
+            SpeedController.Instance.OnSpeedChanged += ChangeSpeed;
+        else
+        {
+            Debug.LogError("Animator not found in children of " + gameObject.name);
+        }
+    }
     
+    public void ChangeSpeed (float newSpeed) 
+    {
+        animator.speed = newSpeed / SpeedDampner;
+    }
+
     public void PlayAction(ActionType action)
     {
         switch (action)
