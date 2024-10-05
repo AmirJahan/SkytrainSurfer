@@ -20,7 +20,7 @@ public class CoinCollision : MonoBehaviour
         }
         else
         {
-            Debug.Log("There is no coin collection effect prefab assigned to the CoinCollision script");
+            //Debug.Log("There is no coin collection effect prefab assigned to the CoinCollision script");
         }
     }
     
@@ -37,7 +37,7 @@ public class CoinCollision : MonoBehaviour
            
             if (coinCollectionEffect)
                 coinCollectionEffect.Play();
-            Debug.Log("COLLECTED COIN");
+            //Debug.Log("COLLECTED COIN");
             
             // Disable the coin visual representation
             GetComponent<MeshRenderer>().enabled = false;

@@ -26,7 +26,7 @@ public class AudioManager : SingletonCreator<AudioManager>
 
         if (sound == null)
         {
-            Debug.Log("Sound Not Found");
+            //Debug.Log("Sound Not Found");
         }
         else
         {
@@ -41,7 +41,7 @@ public class AudioManager : SingletonCreator<AudioManager>
 
         if (sound == null)
         {
-            Debug.Log("Sound Not Found");
+            //Debug.Log("Sound Not Found");
         }
         else
         {

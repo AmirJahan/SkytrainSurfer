@@ -176,7 +176,7 @@ MonoBehaviour:
   PlayerObject: {fileID: 1779919748}
   WorldSpeed: 10
   IncreaseSpeedXSeconds: 1
-  MultiplySpeedBy: 1.05
+  MultiplySpeedBy: 1.01
   MaxSpeed: 20
 --- !u!1001 &741008802
 PrefabInstance:
