@@ -11,6 +11,14 @@ public enum ObstacleType
     Magnet = 3
 }
 
+public enum BuildingType
+{
+    GreyBuilding = 0,
+    BlueBuilding = 1,
+    OrangeBuilding = 2,
+    GreenBuillding = 3,
+}
+
 public class ChunkScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] Lanes;
@@ -81,5 +89,19 @@ public class ChunkScript : MonoBehaviour
             Obstacle = Instantiate(ObstaclePrefabs[(int)obstacle], Location, ObstaclePrefabs[(int)obstacle].transform.rotation);
         }
         Obstacle.transform.SetParent(transform, true);
+    }
+
+    public void AddBuilding(BuildingType buildings, int lane, int forwardOffset)
+    {
+        Vector3 Location = transform.position;
+        Location.x += 50.0f - forwardOffset;
+        float sideOffset = 1.0f;
+        Location.x += (lane % 2 == 0 ? -sideOffset : sideOffset);
+        Location.y = 0.0f;
+        Location.z += -2 + lane * 2;
+
+        GameObject buildingPrefab = Buildings[Random.Range(0, Buildings.Length)];
+        GameObject building = Instantiate(buildingPrefab, Location, Quaternion.identity);
+        building.transform.SetParent(transform, true);
     }
 }
