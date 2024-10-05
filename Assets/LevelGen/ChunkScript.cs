@@ -19,6 +19,8 @@ public class ChunkScript : MonoBehaviour
 
     [SerializeField] private GameObject[] ObstaclePrefabsWithCoins;
 
+    [SerializeField] private GameObject[] Buildings;
+
     [SerializeField] private GameObject Magnet;
     
     private void Update()
