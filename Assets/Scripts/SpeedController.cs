@@ -55,6 +55,9 @@ public class SpeedController
         {
             await Task.Delay(SpeedIncreaseSeconds * 1000);
             CurrentSpeed *= SpeedIncrease;
+            if (MaxSpeed < CurrentSpeed)
+                CurrentSpeed = MaxSpeed;
+            
             OnSpeedChanged?.Invoke(CurrentSpeed);
 
             // ensure the value isn't changing while the game is paused
