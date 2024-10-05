@@ -26,6 +26,8 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField]
     public float WorldSpeed = 10.0f;
+
+    private bool _firstChunk = true;
     
     private void Awake()
     {
@@ -40,7 +42,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
 
-    public GameObject SpawnChunk(Vector3 RelativePosition)
+    public void SpawnChunk(Vector3 RelativePosition)
     {
         Vector3 SpawnPos = PlayerObject.transform.position;
         SpawnPos.y = 0.0f;
@@ -48,9 +50,14 @@ public class LevelGenerator : MonoBehaviour
         SpawnPos += RelativePosition;
         GameObject chunk = Instantiate(ChunkPrefab, SpawnPos, Quaternion.identity);
 
-        PopulateChunk(chunk.GetComponent<ChunkScript>());
-        
-        return chunk;
+        if (_firstChunk == false)
+        {
+            PopulateChunk(chunk.GetComponent<ChunkScript>());
+        } 
+        else
+        {
+            _firstChunk = false;
+        }
     }
 
     void PopulateChunk(ChunkScript Chunk)
@@ -58,7 +65,6 @@ public class LevelGenerator : MonoBehaviour
         Sector randomSector = (Sector)Random.Range(0, 5);
 
         // TODO: Refactor ltr
-
         switch (randomSector)
         {
             case Sector.SideTrains:
