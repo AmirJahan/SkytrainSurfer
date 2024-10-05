@@ -3,35 +3,26 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI highScoreText;
-    private int score;
-    private int highScore;
-    private Coin coin;
+    protected int score;
+    protected int highScore;
 
-    private bool isHighScore;
+    protected bool isHighScore;
 
-    private void Start()
+    private void Awake()
     {
-        if (PlayerPrefs.GetInt("HighScore") != null) highScore = PlayerPrefs.GetInt("HighScore");
-        
+        //highScore = 0;
+        score = DistanceScore.instance.dist;
+        if (PlayerPrefs.GetInt("HighScore") == null) highScore = PlayerPrefs.GetInt("HighScore");
     }
 
     private void Update()
     {
-        if (isHighScore) score = coin.coins;
+        if (isHighScore) highScore = DistanceScore.instance.dist;
         if (score > highScore)
         {
+            Debug.Log("huh");
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
         }
-
-        UpdateText();
-    }
-
-    private void UpdateText()
-    {
-        scoreText.text = "Score: " + score;
-        highScoreText.text = "High Score: " + highScore;
     }
 }
