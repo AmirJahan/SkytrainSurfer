@@ -12,7 +12,7 @@ public class SpeedController
     public float SpeedIncrease = 1.5f;
     public int SpeedIncreaseSeconds = 5;
     
-    private float CurrentSpeed = 1.0f;
+    public float CurrentSpeed = 1.0f;
 
     private static SpeedController _instance;
     public static SpeedController Instance

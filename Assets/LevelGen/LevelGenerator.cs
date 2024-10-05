@@ -56,6 +56,7 @@ public class LevelGenerator : MonoBehaviour
         SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
         
         SpeedController.Instance.Setup(IncreaseSpeedBy, IncreaseSpeedXSeconds);
+        SpeedController.Instance.CurrentSpeed = WorldSpeed;
         SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
     }
 

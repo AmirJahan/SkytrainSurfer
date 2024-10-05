@@ -168,7 +168,11 @@ MonoBehaviour:
   TrainPrefab: {fileID: 3633867860206206719, guid: 2c06dd311a64b4a4b857832f1a57b519,
     type: 3}
   PlayerObject: {fileID: 1779919748}
+  BuildingsPrefab: {fileID: 919132149155446097, guid: aabd863a439f18e479ea3b1081f1b6ab,
+    type: 3}
   WorldSpeed: 5
+  IncreaseSpeedXSeconds: 1
+  IncreaseSpeedBy: 1.05
 --- !u!1 &1043621602
 GameObject:
   m_ObjectHideFlags: 0
