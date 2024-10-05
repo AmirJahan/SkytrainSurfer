@@ -91,14 +91,23 @@ public class ChunkScript : MonoBehaviour
         Obstacle.transform.SetParent(transform, true);
     }
 
-    public void AddBuilding(BuildingType buildings, int lane, int forwardOffset)
+    public void AddBuilding(BuildingType buildings, int lanes, int forwardOffset)
     {
         Vector3 Location = transform.position;
         Location.x += 50.0f - forwardOffset;
-        float sideOffset = 1.0f;
-        Location.x += (lane % 2 == 0 ? -sideOffset : sideOffset);
-        Location.y = 0.0f;
-        Location.z += -2 + lane * 2;
+
+        float sideOffset = 10.0f;
+
+        if (lanes == 0)
+        {
+            Location.z -= sideOffset;
+        }
+        else if (lanes == 2)
+        {
+            Location.z += sideOffset;
+        }
+
+        Location.y = -5.0f + Random.Range(-2.5f, 2.5f);
 
         GameObject buildingPrefab = Buildings[Random.Range(0, Buildings.Length)];
         GameObject building = Instantiate(buildingPrefab, Location, Quaternion.identity);

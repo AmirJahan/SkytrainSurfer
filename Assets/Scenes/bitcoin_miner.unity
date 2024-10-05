@@ -174,9 +174,9 @@ MonoBehaviour:
   TrainPrefab: {fileID: 3633867860206206719, guid: 2c06dd311a64b4a4b857832f1a57b519,
     type: 3}
   PlayerObject: {fileID: 1779919748}
-  WorldSpeed: 5
+  WorldSpeed: 10
   IncreaseSpeedXSeconds: 1
-  MultiplySpeedBy: 1.1
+  MultiplySpeedBy: 1.05
   MaxSpeed: 20
 --- !u!1001 &741008802
 PrefabInstance:
