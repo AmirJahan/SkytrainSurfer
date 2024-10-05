@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 34757cbf0bec62f4da981ab760fc40ff
+timeCreated: 1497630916
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/DlibFaceLandmarkDetectorWithOpenCVExample.unitypackage
+  uploadId: 679495

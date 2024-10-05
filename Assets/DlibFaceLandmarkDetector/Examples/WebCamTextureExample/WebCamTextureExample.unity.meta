@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d10e63dad123dea49ab251a205ecf64f
+timeCreated: 1461438336
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/Examples/WebCamTextureExample/WebCamTextureExample.unity
+  uploadId: 679495

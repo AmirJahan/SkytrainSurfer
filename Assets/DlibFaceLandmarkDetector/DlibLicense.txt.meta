@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce43373fc02bf0d41a63c54958f810e1
+timeCreated: 1531911535
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/DlibLicense.txt
+  uploadId: 679495

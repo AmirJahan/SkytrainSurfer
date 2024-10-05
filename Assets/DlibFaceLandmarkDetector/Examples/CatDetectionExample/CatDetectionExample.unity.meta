@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c173eaaeba2da1408c7057b72cf8441
+timeCreated: 1462530674
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/Examples/CatDetectionExample/CatDetectionExample.unity
+  uploadId: 679495

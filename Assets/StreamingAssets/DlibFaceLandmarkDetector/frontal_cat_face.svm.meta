@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e5e62f9d6084e2e409d3cca20d74d5dc
+timeCreated: 1463056794
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/StreamingAssets/DlibFaceLandmarkDetector/frontal_cat_face.svm
+  uploadId: 679495

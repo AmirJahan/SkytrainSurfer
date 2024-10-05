@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7166fda719c99694d9297ead935e2a9d
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/EnoxSoftware.DlibFaceLandmarkDetector.asmdef
+  uploadId: 679495

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c849ccca38191cd4ea0853aa4b80008a
+timeCreated: 1579030163
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/Extra.unitypackage
+  uploadId: 679495

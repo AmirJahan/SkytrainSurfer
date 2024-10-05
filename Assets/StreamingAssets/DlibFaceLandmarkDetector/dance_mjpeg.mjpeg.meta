@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b4de703d4c49bd147aaf4062a859d1e9
+timeCreated: 1463056807
+licenseType: Store
+MovieImporter:
+  serializedVersion: 1
+  quality: .5
+  linearTexture: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 64314
+  packageName: Dlib FaceLandmark Detector
+  packageVersion: 1.3.9
+  assetPath: Assets/DlibFaceLandmarkDetector/StreamingAssets/DlibFaceLandmarkDetector/dance_mjpeg.mjpeg
+  uploadId: 679495
