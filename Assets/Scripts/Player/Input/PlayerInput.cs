@@ -33,7 +33,23 @@ public class PlayerInput : MonoBehaviour
         inputs.Movement.Enable();
         inputs.Movement.Touch.canceled += ProcessTouchComplete;
         inputs.Movement.Swipe.performed += ProcessSwipeDelta;
+        inputs.Movement.KB_Move.performed += KBMove;
+        inputs.Movement.KB_Jump.performed += KBJump;
     }
+
+    void KBMove(InputAction.CallbackContext context)
+    {
+
+        moveDir = new Vector2(context.ReadValue<float>(), 0);
+        moveDir = moveDir.normalized;
+    }
+
+    void KBJump(InputAction.CallbackContext context)
+    {
+        moveDir = new Vector2(0, context.ReadValue<float>());
+        moveDir = moveDir.normalized;
+    }
+
 
     void ProcessTouchComplete(InputAction.CallbackContext context)
     { 

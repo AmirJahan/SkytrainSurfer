@@ -22,6 +22,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "KB_Move",
+                    "type": "Value",
+                    "id": "6d3a9bcd-4eb7-4496-8b22-69ef4aa22522",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "KB_Jump",
+                    "type": "Value",
+                    "id": "03084a6d-a19a-4a27-8cbf-67e2ebffb6ae",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -44,6 +62,89 @@
                     "processors": "",
                     "groups": "",
                     "action": "Swipe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f2a58c1c-6ec1-47db-8bef-a1c1835c4d24",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "",
+                    "action": "KB_Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ce762f6-2e2b-4b69-8cec-710a2df94aa2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KB_Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a5f7922-ed96-41df-86ec-c152d1c08c8b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KB_Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b78a92b-0f0d-4627-9998-6df6da224165",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KB_Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6895f66-a727-4dcc-b1bb-dbc8199eb11c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "",
+                    "action": "KB_Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "239f4606-e7be-44cb-8a1f-61e2f3df1347",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "9d274681-9c73-472c-b736-fefc16f6d014",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "24d03170-8195-4706-9d59-d680449bbcf8",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
