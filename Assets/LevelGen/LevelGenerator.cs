@@ -32,7 +32,10 @@ public class LevelGenerator : MonoBehaviour
     int IncreaseSpeedXSeconds = 5;
     
     [SerializeField]
-    float IncreaseSpeedBy = 1.5f;
+    float MultiplySpeedBy = 1.5f;
+    
+    [SerializeField]
+    float MaxSpeed = 100.0f;
     
  
     private void Awake()
@@ -46,7 +49,7 @@ public class LevelGenerator : MonoBehaviour
         SpawnChunk(new Vector3(-45.0f, -1.5f, 0.0f));
         SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
         
-        SpeedController.Instance.Setup(IncreaseSpeedBy, IncreaseSpeedXSeconds);
+        SpeedController.Instance.Setup(WorldSpeed, MultiplySpeedBy, IncreaseSpeedXSeconds, MaxSpeed);
         SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
     }
 
