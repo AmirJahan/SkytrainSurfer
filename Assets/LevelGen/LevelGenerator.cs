@@ -27,6 +27,10 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField]
     public float WorldSpeed = 10.0f;
+
+    [SerializeField] public const float MagnetSpawnTime = 30f;
+
+    private bool SpawnMagnet = false;
     
     [SerializeField, Tooltip("How often the speed should increase in seconds")]
     int IncreaseSpeedXSeconds = 5;
@@ -56,6 +60,12 @@ public class LevelGenerator : MonoBehaviour
     public void UpdateWorldSpeed(float speed)
     {
         WorldSpeed = speed;
+        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
+    }
+
+    void SetSpawnMagnet()
+    {
+        SpawnMagnet = true;
     }
 
     public GameObject SpawnChunk(Vector3 RelativePosition)
@@ -159,6 +169,12 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
+        }
+
+        if (SpawnMagnet)
+        {
+            Chunk.AddObstacle(ObstacleType.Magnet, 1, 0);
+            SpawnMagnet = false;
         }
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Coin
+  - PowerUp
   layers:
   - Default
   - TransparentFX
