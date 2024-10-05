@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3d0738db55b52ca45a81fe6cfec016f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cubePrefab: {fileID: 8968228618387771328, guid: 0377fefc6df8b7b45a32ce0438f1fac7,
+      type: 3}
+  - onnxModelAsset: {fileID: 5022602860645237092, guid: e8139a0cd90ccb8439fdeaefcc1a3844,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
