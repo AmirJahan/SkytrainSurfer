@@ -7,7 +7,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (SpeedController.IsValid())
         {
-            SpeedController.Instance.Setup(10.0f, 5);
+            SpeedController.Instance.Setup(10.0f, 2, 5, 100);
         }
         
         SceneManager.LoadScene(scene);
