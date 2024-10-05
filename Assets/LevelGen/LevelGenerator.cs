@@ -8,6 +8,8 @@ public enum Sector
     RightTrain,
     LeftMiddleTrains,
     RightMiddleTrains,
+    LeftBuilding,
+    RightBuilding
 }
 
 public class LevelGenerator : MonoBehaviour
@@ -55,12 +57,13 @@ public class LevelGenerator : MonoBehaviour
         
         SpeedController.Instance.Setup(WorldSpeed, MultiplySpeedBy, IncreaseSpeedXSeconds, MaxSpeed);
         SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
+        
+        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     public void UpdateWorldSpeed(float speed)
     {
         WorldSpeed = speed;
-        InvokeRepeating(nameof(SetSpawnMagnet), 0, MagnetSpawnTime);
     }
 
     void SetSpawnMagnet()
@@ -169,6 +172,24 @@ public class LevelGenerator : MonoBehaviour
                 }
                 break;
             }
+            case Sector.LeftBuilding:
+                Chunk.AddBuilding(BuildingType.GreenBuillding, 0, Random.Range(11, 4) * 11);
+                break;
+
+            case Sector.RightBuilding:
+                Chunk.AddBuilding(BuildingType.GreenBuillding, 2, Random.Range(4, 11) * 11); 
+                break;
+        }
+        int numberOfBuildings = 10;
+        float distanceBetweenBuildings = 10.0f;
+
+        for (int i = 0; i < numberOfBuildings; i++)
+        {
+            float forwardOffset = i * distanceBetweenBuildings;
+
+            Chunk.AddBuilding(BuildingType.GreenBuillding, 0, (int)forwardOffset); 
+
+            Chunk.AddBuilding(BuildingType.GreenBuillding, 2, (int)forwardOffset);
         }
 
         if (SpawnMagnet)
