@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum Sector
@@ -27,6 +28,13 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField]
     public float WorldSpeed = 10.0f;
     
+    [SerializeField, Tooltip("How often the speed should increase in seconds")]
+    int IncreaseSpeedXSeconds = 5;
+    
+    [SerializeField]
+    float IncreaseSpeedBy = 1.5f;
+    
+ 
     private void Awake()
     {
         Instance = this;
@@ -37,8 +45,15 @@ public class LevelGenerator : MonoBehaviour
     {
         SpawnChunk(new Vector3(-45.0f, -1.5f, 0.0f));
         SpawnChunk(new Vector3(-145.0f, -1.5f, 0.0f));
+        
+        SpeedController.Instance.Setup(IncreaseSpeedBy, IncreaseSpeedXSeconds);
+        SpeedController.Instance.OnSpeedChanged += UpdateWorldSpeed;
     }
 
+    public void UpdateWorldSpeed(float speed)
+    {
+        WorldSpeed = speed;
+    }
 
     public GameObject SpawnChunk(Vector3 RelativePosition)
     {
