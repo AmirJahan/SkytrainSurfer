@@ -31,7 +31,6 @@ public class CoinCollision : MonoBehaviour
             if (coinCollectionPrefab)
             {
                 coinCollectionEffect = Instantiate(coinCollectionPrefab, transform.position, Quaternion.identity).GetComponent<VisualEffect>();
-                StartCoroutine(CleanUp());
             }
             else
             {
@@ -51,11 +50,7 @@ public class CoinCollision : MonoBehaviour
         }
     }
     
-    IEnumerator CleanUp()
-    {
-        yield return new WaitForSeconds(1.25f);
-        Destroy(coinCollectionEffect.gameObject);
-    }
+
 
     public void CoinPullToLocation(Vector3 Location , float duration)
     {
