@@ -150,7 +150,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coin, Assembly-CSharp
-        m_MethodName: AddScore
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -160,4 +160,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  coinCollectionPrefab: {fileID: 0}
+  coinCollectionPrefab: {fileID: 1881363789926446490, guid: c577b307277ad8a458bfd79976d18b4f,
+    type: 3}

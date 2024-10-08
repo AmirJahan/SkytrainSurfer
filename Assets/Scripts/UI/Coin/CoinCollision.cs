@@ -14,14 +14,7 @@ public class CoinCollision : MonoBehaviour
 
     private void Start()
     {
-        if (coinCollectionPrefab)
-        {
-            coinCollectionEffect = Instantiate(coinCollectionPrefab, transform.position, Quaternion.identity).GetComponent<VisualEffect>();
-        }
-        else
-        {
-            //Debug.Log("There is no coin collection effect prefab assigned to the CoinCollision script");
-        }
+
     }
     
     private void OnTriggerEnter(Collider other)
@@ -34,16 +27,34 @@ public class CoinCollision : MonoBehaviour
             
             if (AudioManager.Instance)
                 AudioManager.Instance.PlaySFX("CoinPickUp");
-           
-            if (coinCollectionEffect)
-                coinCollectionEffect.Play();
-            //Debug.Log("COLLECTED COIN");
-            
+
+            if (coinCollectionPrefab)
+            {
+                coinCollectionEffect = Instantiate(coinCollectionPrefab, transform.position, Quaternion.identity).GetComponent<VisualEffect>();
+                StartCoroutine(CleanUp());
+            }
+            else
+            {
+                #if UNITY_EDITOR
+                Debug.Log("There is no coin collection effect prefab assigned to the CoinCollision script");
+                #endif
+            }
+
+            #if UNITY_EDITOR
+            Debug.Log("COLLECTED COIN");
+            #endif
+                        
             // Disable the coin visual representation
             GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(DestroyAfterLoad());
 
         }
+    }
+    
+    IEnumerator CleanUp()
+    {
+        yield return new WaitForSeconds(1.25f);
+        Destroy(coinCollectionEffect.gameObject);
     }
 
     public void CoinPullToLocation(Vector3 Location , float duration)
