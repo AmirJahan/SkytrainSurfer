@@ -328,6 +328,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 545944538263406339, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 545944538263406339, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 545944538263406339, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 545944538263406339, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3537458119015074139, guid: 596c497c466d8499bbbc96b7b707d827,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,6 +407,26 @@ PrefabInstance:
         type: 3}
       propertyPath: LeaderboardCanvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975852556955511479, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975852556955511479, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975852556955511479, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975852556955511479, guid: 596c497c466d8499bbbc96b7b707d827,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
